@@ -686,9 +686,14 @@ body { min-height: 90vh; }
 /*******************
 * Contact
 *******************/
-/*******************
-* Another Template
-*******************/
+.site-main .wpcf7 input[type="submit"]:hover { background-color: #e31c79; }
+
+.site-main .wpcf7 label { font-weight: 700; margin: 1em 0 0 0; padding: 0 0 .3em 0; display: inline-block; }
+
+.site-main .wpcf7 label em { color: #DB2525; }
+
+.site-main .wpcf7 textarea { margin: 0 0 1.5em 0; }
+
 @media print { * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; }
   a:link, a:visited { color: black !important; text-decoration: underline; }
   pre, blockquote { border: 1px solid black; page-break-inside: avoid; }

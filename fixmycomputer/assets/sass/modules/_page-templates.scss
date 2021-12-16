@@ -1,0 +1,21 @@
+/*******************
+* Contact
+*******************/
+.site-main .wpcf7 {
+    input[type="submit"]:hover{
+        background-color: $color_pink;
+    }
+    label {
+        font-weight: 700;
+        margin: 1em 0 0 0;
+        padding: 0 0 .3em 0;
+        display: inline-block;
+
+        em {
+            color: $color_error;
+        }
+    }
+    textarea {
+        margin: 0 0 1.5em 0;
+    }
+}
