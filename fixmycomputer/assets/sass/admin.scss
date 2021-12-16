@@ -1,0 +1,65 @@
+@charset "utf-8";
+
+// Variables, Toolkit, Mixins
+@import "setup/variables";
+// @import "global/icons";
+
+
+/********************************************************
+ * Admin Styles
+********************************************************/
+.meta-box-sortables #slugdiv,
+#screen-options-wrap label[for="slugdiv-hide"] {
+	display: none;
+}
+
+// Generic field html stuff for admin messages
+.acf-field.acf-field-message {
+    ul {
+        list-style-type: disc;
+    }
+    ol {
+        list-style-type: decimal;
+    }
+    ul, ol {
+        padding-left: 1.5em;
+        padding-bottom: 0.5em;
+    }
+}
+
+// Remove the border from the group field to make it seamless
+// Label is still shown if its set
+.acf-field.acf-field-group.seamless {
+    padding: 0!important;
+
+    .acf-fields.-border {
+        border: none;
+	}
+	& > .acf-label {
+		margin-bottom: 0!important;
+
+		label {
+			margin-left: 12px;
+			margin-top: 15px;
+		}
+	}
+	& > .acf-input {
+		padding: 0!important;
+	}
+}
+
+// Disable parts of blocks via class
+.acf-fields{
+    .acf-field{
+        &.noLabel{
+            > .acf-label{
+                display: none;
+            }
+        }
+    }
+}
+
+
+/********************************************************
+ * Custom Admin Styles
+********************************************************/

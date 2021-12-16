@@ -1,0 +1,193 @@
+@charset "utf-8";
+
+*, *:before, *:after {
+	box-sizing: border-box;
+}
+
+// Variables, Toolkit, Mixins
+@import "setup/variables";
+@import "setup/toolkit";
+
+// Sitewide Styles
+@import "global/typography";
+@import "global/ctas";
+
+// Layout
+@import "layout/forms";
+
+// Module Styles
+@import "modules/content";
+
+/******************************************************************
+ * All WordPress Login Parameters
+ * 
+ * Reset Password
+ * http://example.com/wp-login.php?action=rp
+ * http://example.com/wp-login.php?action=resetpass
+ * http://example.com/wp-login.php?action=lostpassword
+ * http://example.com/wp-login.php?action=lostpassword&error=invalidkey
+ * 
+ * Registration
+ * http://example.com/wp-login.php?action=register
+ * http://example.com/wp-login.php?checkemail=confirm
+ * http://example.com/wp-login.php?checkemail=registered
+ * http://example.com/wp-login.php?registration=disabled
+ * 
+ * Logged Out
+ * http://example.com/wp-login.php?loggedout=true
+******************************************************************/
+input[type="text"], 
+input[type="password"], 
+input[type="search"], 
+input[type="email"], 
+input[type="url"], 
+input[type="tel"], 
+input[type="number"], 
+textarea {
+    padding: 0.5em!important;
+    font-size: 1.23em!important;
+	min-height: auto!important;
+}
+a {
+    color: #0000ee;
+
+	&:hover {
+		color: $color_pink!important;
+	}
+	&:focus {
+		box-shadow: none!important;
+	}
+}
+
+// Normal WordPress Login
+html, body {
+	background-color: #262626;
+}
+body.login{
+	div#login {
+		padding: 2em 0 0;
+
+		h1 a {
+			background-position: center center;
+			background-repeat: no-repeat;
+			background-size: auto;
+			width: 100%;
+		}
+		.message, #login_error {
+			background: transparent;
+			border: none;
+			box-shadow: none;
+			line-height: 1.6;
+			color: $color_white;
+		}
+		form#loginform,
+		form#lostpasswordform {
+			label {
+				font-size: 15px;
+				color: $color_black;
+			}
+			input {
+				margin-right: 0;
+				color: $color_black;
+				
+				&:focus {
+					border-color: $color_purple;
+					box-shadow: 0 0 0 1px $color_purple;
+				}
+			}
+			.button.wp-hide-pw {
+				color: $color_black;
+
+				&:hover {
+					color: $color_purple;
+				}
+				&:focus {
+					border-color: $color_purple;
+					box-shadow: 0 0 0 1px $color_purple;
+				}
+			}
+			p {
+				input[type="submit"],
+				input#wp-submit,
+				.itsec-pwls-login__link {
+					padding: .8em 1.5em;
+					margin-left: .5em;
+					border: 0;
+					transform: skew(-12deg);
+					text-shadow: none;
+					text-transform: uppercase;
+					font-weight: 700;
+					background-color: $color_purple;
+					color: $color_white!important;
+					display: inline-block;
+					box-shadow: 0px 0px 5px -1px #b7b7b7;
+					border-radius: 0;
+					transition: all .3s ease-out;
+
+					&:hover {
+						background-color: $color_pink;
+						color: $color_black;
+					}
+				}
+			}
+		}
+		p#nav a, p#backtoblog a, .privacy-policy-link {
+			color: $color_white;
+			text-decoration: none;
+		}
+	}
+}
+
+
+/*
+.cta-button {
+	display: inline-block;
+    padding: 1em 1.5em;
+    margin-left: .5em;
+    transform: skew(-12deg);
+    text-shadow: none;
+    text-transform: uppercase;
+    font-weight: 700;
+	background-color: $color_purple;
+	color: $color_white!important;
+	box-shadow: 0px 0px 5px -1px #b7b7b7;
+
+	&:after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		background: $color_pink;
+		transform: scale(0);
+		transition-property: transform;
+		transition-duration: 0.3s;
+		transition-timing-function: ease-out;
+	}
+	&:hover {
+		&:after {
+			transform: scale(1);
+		}
+	}
+	&.-white {
+		background-color: $color_white;
+		color: $color_black!important;
+	}
+}
+*/
+
+
+/** 
+ * The interim login screen is displayed when you are working in the WordPress
+ * Admin Area and for some reason the session expires and you are logged out.
+ * 
+ * Make it think your session expired with the following JavaScript
+ * jQuery(document).trigger('heartbeat-tick.wp-auth-check', [ {'wp-auth-check': false} ]);
+*/
+body.interim-login {
+	h1 a {
+		background-size: auto;
+	}
+}

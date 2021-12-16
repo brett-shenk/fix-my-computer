@@ -1,0 +1,135 @@
+/******************************************************************
+* PREVIEW The SVG Here
+* https://icomoon.io/app/#/select
+* 
+* GENERATED FILE
+******************************************************************/
+
+@font-face {
+	font-family: 'shenks-icons';
+	font-display: block;
+	src: url('../svgs/shenks-icons.woff2') format('woff2'),
+		url('../svgs/shenks-icons.woff') format('woff'),
+		url('../svgs/shenks-icons.ttf') format('truetype'),
+		url('../svgs/shenks-icons.svg#shenks-icons') format('svg');
+}
+
+@mixin icon-styles {
+	font-family: "shenks-icons";
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+	font-style: normal;
+	font-weight: normal;
+	text-decoration: none;
+	display: inline-block;
+	line-height: inherit;
+	vertical-align: bottom;
+	transition: all 0.25s ease-out;
+}
+
+%icon {
+	@include icon-styles;
+}
+
+@function icon-char($filename) {
+	$char: "";
+
+	@if $filename == chevron-left {
+		$char: "\E001";
+	}
+	@if $filename == chevron-right {
+		$char: "\E002";
+	}
+	@if $filename == close {
+		$char: "\E003";
+	}
+	@if $filename == done {
+		$char: "\E004";
+	}
+	@if $filename == email {
+		$char: "\E005";
+	}
+	@if $filename == facebook {
+		$char: "\E006";
+	}
+	@if $filename == home1 {
+		$char: "\E007";
+	}
+	@if $filename == map {
+		$char: "\E008";
+	}
+	@if $filename == mode-dark {
+		$char: "\E009";
+	}
+	@if $filename == mode-light {
+		$char: "\E00A";
+	}
+	@if $filename == phone {
+		$char: "\E00B";
+	}
+
+	@return $char;
+}
+
+@mixin icon($filename, $insert: before, $extend: true) {
+	&:#{$insert} {
+		@if $extend {
+			@extend %icon;
+		} @else {
+			@include icon-styles;
+		}
+		content: icon-char($filename);
+	}
+}
+
+.icon-chevron-left {
+	@include icon(chevron-left);
+}
+.icon-chevron-right {
+	@include icon(chevron-right);
+}
+.icon-close {
+	@include icon(close);
+}
+.icon-done {
+	@include icon(done);
+}
+.icon-email {
+	@include icon(email);
+}
+.icon-facebook {
+	@include icon(facebook);
+}
+.icon-home1 {
+	@include icon(home1);
+}
+.icon-map {
+	@include icon(map);
+}
+.icon-mode-dark {
+	@include icon(mode-dark);
+}
+.icon-mode-light {
+	@include icon(mode-light);
+}
+.icon-phone {
+	@include icon(phone);
+}
+
+
+
+/******************************************************************
+* Custom Icons
+
+* WARNING: Edit  icons-template.scss
+* TIP: [class*='icon-'] to target any icon
+******************************************************************/
+.checkbox-wrap  {
+	@include icon(done);
+}
+.slick-prev, [dir='rtl'] .slick-next {
+	@include icon(chevron-left);
+}
+.slick-next, [dir='rtl'] .slick-prev {
+    @include icon(chevron-right);
+}

@@ -1,0 +1,81 @@
+/********************************************************
+ * Helpful Classes 
+********************************************************/
+.hidden {
+	display: none!important;
+}
+
+
+/********************************************************
+ * Screen Reader Text
+********************************************************/
+@mixin sr-only {
+	border: 0 !important;
+	clip: rect(1px, 1px, 1px, 1px) !important;
+	-webkit-clip-path: inset(50%) !important;
+	clip-path: inset(50%) !important;
+	height: 1px !important;
+	margin: -1px !important;
+	overflow: hidden !important;
+	padding: 0 !important;
+	position: absolute !important;
+	width: 1px !important;
+	white-space: nowrap !important;
+}
+@mixin screen-reader-text {
+	@include sr-only();
+}
+.sr-only, .screen-reader-text {
+	@include sr-only();
+}
+
+
+/********************************************************
+ * Dynamically Generate z-index based on name position
+ * 
+ * How to use:    map-get($z-layers, "z-index-menu");
+******************************************************/
+$z-layers-names: ("home-slider", "slider-arrows", "service-block", "preload", "menu", "admin-bar");
+$z-layers: ();
+
+$i: 0;
+@each $layer-name in $z-layers-names {
+	$i: $i + 1;
+	$css-var-name: "z-index-" + $layer-name;
+
+	$z-layers: map-merge(
+		$z-layers,
+		($css-var-name: $i),
+	);
+}
+
+
+/********************************************************
+ * Mixins
+********************************************************/
+@mixin wrap {
+	margin: 0 auto;
+	width: 100%;
+	max-width: $site_width;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+@mixin pseudo-element {
+	content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+@mixin clearfix {
+	&:before, &:after {
+		display: table;
+		content: "";
+	}
+	&:after {
+		clear: both;
+	}
+}

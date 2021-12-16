@@ -1,0 +1,62 @@
+/********************************************************
+ * SIZES 
+********************************************************/
+$site_width:		100.571em;
+$spacing_line:		2em;
+$spacing_section:	4em;
+$base_font_size:	1em;
+
+
+/********************************************************
+ * COLORS
+********************************************************/
+$color_error: #DB2525;
+$color_success: #0b881c;
+
+$color_white: #fff;
+$color_black: #000;
+
+$color_gray_1: #C4C4C4;
+
+$color_purple: #3E267B;     // Primary
+$color_dark_purple: #291B4B;
+
+$color_pink: #e31c79;       // CTAs
+
+/********************************************************/
+// Files Paths
+// Ex: #{$font_path}
+/********************************************************/
+$image_path: '../../dist/images/';
+$font_path: '../../fonts/';
+
+
+/********************************************************
+ * TYPOGRAPHY
+ * 
+ * .EOT is meant for IE browsers, like 8 and below
+ * .TTF goes back to the 1980's
+ * .WOFF2 & .WOFF are the recommended formats, in order
+********************************************************/
+$sans:				"Roboto", Helvetica, Arial, sans-serif;
+$serif:				"Georgia", "Times New Roman", serif;
+
+$font_heading:		$sans;
+$font_body:			$sans;
+
+
+/********************************************************
+ * SOCIAL COLORS - http://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
+********************************************************/
+$twitter:			#55acee;
+$facebook: 			#2D88FF;
+$linkedin:			#007bb5;
+$google:			#dd4b39;
+$youtube:			#ff0000;
+$pinterest: 		#cb2027;
+$tumblr:			#32506d;
+$flickr:			#ff0084;
+$instagram:			#e95950;
+$vimeo:				#aad450;
+$foursquare: 		#0072b1;
+$rss:				#ff6600;

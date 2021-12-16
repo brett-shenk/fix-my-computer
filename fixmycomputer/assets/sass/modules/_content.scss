@@ -1,0 +1,32 @@
+html, body {
+	background-color: $color_white;
+}
+html {
+	-webkit-text-size-adjust: 100%;
+}
+body {
+	min-height: 90vh;
+}
+.site-main {
+	position: relative;
+	overflow: hidden;
+}
+.wrapper {
+	max-width: $site_width;
+	margin: 0 auto;
+	padding-left: 1em;
+	padding-right: 1em;
+}
+.column-container {
+	display: flex;
+
+	.column {
+		flex-grow: 1;
+		flex-basis: 25%;
+	}
+}
+
+
+// Style the admin editor
+body.mce-content-body {
+}

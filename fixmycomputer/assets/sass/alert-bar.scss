@@ -1,0 +1,97 @@
+@charset "utf-8";
+
+// Variables, Toolkit, Mixins
+@import "setup/variables";
+@import "setup/toolkit";
+
+.alert-bar-container {
+    background-color: #ffcc2f;
+    color: $color_black;
+    padding: 0.4em;
+    width: 100%;
+    z-index: map-get($z-layers, "z-index-menu") + 1;
+    overflow: hidden;
+    transition: all .25s ease;
+
+   .column {
+        flex-grow: 0!important;
+        flex-basis: auto!important;
+
+        &:nth-of-type(2){
+            padding: 0 1em;
+
+            @media (max-width: 31.25em) {       // 500px
+                max-height: 13em;
+                overflow: scroll;
+            }
+            &.-no-cta {
+                padding-right: 0;
+            }
+        }
+        &:nth-of-type(3){
+            align-self: center;
+        }
+    }
+    .cta-button {
+        white-space: nowrap;
+    }
+    button[type="button"]{
+        color: $color_black;
+        border: none;
+        background-color: transparent;
+        height: 100%;
+        font-size: 1.6em;
+        padding: 0px 0.5em;
+        position: relative;
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 52%;
+            left: 50%;
+            border: 2px solid $color_black;
+            width: 1.2em;
+            height: 1.2em;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.25s ease-out;
+
+            @media (max-width: 62.5em) {        // 1000px
+                top: 51%;
+            }
+        }
+        &:hover {
+            color: $color_white;
+
+            &:after {
+                border-color: $color_white;
+            }
+        }
+    }
+}
+.site-header {
+    transform: translateY(-70px);
+
+    @media (max-width: 75em) {          // 1200px
+        transform: translateY(-100px);
+    }
+    @media (max-width: 50em) {          // 800px
+        transform: translateY(-132px)
+    }
+    @media (max-width: 37.5em) {        // 600px
+        transform: translateY(-160px);
+    }
+    @media (max-width: 31.25em) {       // 500px
+        transform: translateY(-190px);
+    }
+    .alert-bar-container {
+        transform: translateY(-200px);
+    }
+    &.enabled {
+        transform: translateY(0);
+
+        .alert-bar-container {
+            transform: translateY(0);
+        }
+    }
+}

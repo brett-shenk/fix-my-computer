@@ -1,0 +1,118 @@
+.site-header {
+    position: fixed;
+    top: 0;
+    z-index: map-get($z-layers, "z-index-menu");
+    width: 100%;
+    background-color: $color_black;
+    box-shadow: -2px 4px 10px 0px #141414;
+    transition: all .25s ease;
+
+    .wrapper {
+        display: flex;
+
+        @media (max-width: 1300px) {
+            justify-content: space-between;
+        }
+        @media (max-width: 48.875em) {          // 782px
+            min-height: 131px;
+        }
+        & > a {
+            flex-grow: 0;
+        }
+        & > nav {
+            flex-grow: 2;
+        }
+    }
+    &.hide {
+        top: -250px!important;
+    }
+}
+.logo {
+    line-height: 0;
+
+    .mobile {
+        max-height: 129px;
+        width: auto;
+
+        @media (min-width: 43.75em) {       // 700px
+            @include sr-only();
+        }
+    }
+    .desktop {
+        @media (max-width: 43.74em) {       // 700px
+            @include sr-only();
+        }
+    }
+}
+#nav-placeholder {
+    height: 129px;
+    transition: .25s all ease-in-out;
+}
+body {
+    &.admin-bar {
+        #wpadminbar {
+            z-index: map-get($z-layers, "z-index-admin-bar");
+
+            @media (max-width: 37.5em) {        // 600px
+                position: fixed;
+            }
+        }
+        .site-header {
+            top: 2em;
+
+            @media (max-width: 48.875em) {      // 782px
+                top: 2.8em;
+            }
+        }
+    }
+}
+
+.banner-container {
+    &[data-layout-type="banner"]{
+        position: relative;
+
+        &:before {
+            @include pseudo-element;
+            background-color: rgba(0, 0, 0, .5);
+        }
+        .entry-title {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            color: $color_white;
+            transform: translateY(-50%);
+            transform-origin: bottom;
+            text-align: center;
+            animation-name: zoomIn;
+            animation-duration: 2.5s;
+        }
+    }
+    &[data-layout-type="text"]{
+        .entry-title {
+            color: $color_dark_purple;
+            text-align: center;
+            margin: 1em .5em 1.5em .5em;
+        }
+        & ~ .rank-math-breadcrumb p {
+            border-top: 1px solid $color_purple;
+        }
+    }
+}
+.rank-math-breadcrumb {
+    text-align: center;
+
+    p {
+        display: inline-block;
+        line-height: 1;
+        border: 1px solid $color_dark_purple;
+        border-top: none;
+        padding: 0.7em 0.9em;
+
+        a {
+            color: $color_purple;
+            font-weight: 600;
+            @include link_draw_line();
+        }
+    }
+}

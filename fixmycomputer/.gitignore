@@ -1,0 +1,20 @@
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Sublime Text
+*.sublime-*
+sftp-config.json
+
+# Visual Studio Code
+.vscode/
+
+# SASS
+.sass-cache
+config.codekit
+.codekit-cache/
+compass_app_log.txt
+
+# Node/Gulp/Bower
+assets/bower_components/
+node_modules/

@@ -1,0 +1,50 @@
+embed, iframe, img, object, video, .wp-caption {
+	max-width: 100%;
+}
+figure {
+	margin: 0;
+}
+img, picture {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	display: block;
+}
+img {
+	height: auto;
+}
+img.centered, .aligncenter {
+	display: block;
+	margin: 0 auto 1.5em auto;
+}
+img.alignnone {
+}
+.alignleft {
+	float: left;
+	text-align: left;
+}
+.alignright {
+	float: right;
+	text-align: right;
+}
+img.alignleft, .wp-caption.alignleft {
+	margin-right: 1.5em;
+	margin-bottom: 1.5em;
+}
+img.alignright, .wp-caption.alignright {
+	margin-bottom: 1.5em;
+	margin-left: 1.5em;
+}
+.wp-caption {
+	width: auto !important;
+
+	p {
+		margin-bottom: 0;
+	}
+}
+.wp-caption-text {
+	margin: 0;
+	text-align: center;
+}
+.gallery-caption {
+}

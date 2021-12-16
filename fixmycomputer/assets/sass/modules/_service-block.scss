@@ -1,0 +1,151 @@
+.module-service-block {
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
+.module-service-block .wrapper {
+    display: flex;
+    justify-content: space-around;
+
+    @media (max-width: 1300px) {
+        flex-wrap: wrap;
+    }
+    .the-service-block {
+        flex-grow: 0;
+        flex-basis: 25%;
+        position: relative;
+        z-index: map-get($z-layers, "z-index-service-block");
+        overflow: hidden;
+        min-width: 390px;
+        margin: 1em;
+
+        .first-part {
+            position: relative;
+
+            &:after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                display: block;
+                z-index: map-get($z-layers, "z-index-service-block") + 1;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: rgba(0, 0, 0, .4);
+            }
+            h3 {
+                position: absolute;
+                top: 50%;
+                z-index: map-get($z-layers, "z-index-service-block") + 2;
+                transform: translateY(-50%);
+                width: 100%;
+                text-align: center;
+                font-size: 2.5em;
+                color: $color_white;
+                text-shadow: 0 0 3px #000000;
+            }
+        }
+        .second-part {
+            position: absolute;
+            top: calc(91% - 3em);
+            right: -94%;
+            z-index: map-get($z-layers, "z-index-service-block") + 3;
+            width: 100%;
+            padding: 1.9em;
+            border-top-left-radius: 3.5em;
+            background-color: $color_dark_purple;
+            color: $color_white;
+            bottom: 0;
+            transition: .3s all ease-in;
+            
+            @media (max-width: 1300px) {
+                padding: 1.3em 3em;
+            }
+            
+            // General settings
+            &:before, &:after,  & > div:after, & > div:before {
+                content: '';
+                display: block;
+                position: absolute;
+                z-index: -1;
+            }
+            // Purple triangle
+            &:before {
+                top: -0.7em;
+                left: -4.5em;
+                border-top: 3.5em solid transparent;
+                border-left: 3.5em solid transparent;
+                border-right: 3.5em solid $color_dark_purple;
+                border-bottom: 3.5em solid $color_dark_purple;
+                border-top-right-radius: 35px;
+            }
+            // Covering the top seam of the triangle and the box
+            & > div:after {
+                top: 0%;
+                left: 1.9em;
+                width: 3em;
+                height: 1.5em;
+                background-color: $color_dark_purple;
+            }
+            & > div:before {
+                top: 1.8em;
+                left: -6.1em;
+                width: 9em;
+                height: 1.8em;
+                background: linear-gradient( 0deg, rgba(0,0,0,0) 48%, rgba(255,255,255,1) 100%);
+                transform: rotate(135deg);
+                z-index: -2;
+            }
+            // Making the triangle above look apart of the rest of the box
+            &:after {
+                top: 6.3em;
+                left: -4.5em;
+                bottom: 0;
+                height: 80%;
+                width: 4.5em;
+                background-color: $color_dark_purple;
+            }
+        }
+        &:hover {
+            .second-part {
+                top: 0%;
+                right: 0%;
+            }
+        }
+        .cta-button {
+            margin-top: 0.8em;
+        }
+    }
+}
+
+
+
+.module-service-text {
+    margin: 2em 0;
+
+    .column-container {
+        flex-wrap: wrap;
+
+        .column {
+            flex-basis: 33%;
+            padding: 2.8em 1.5em 2.8em 1.5em;
+            text-align: center;
+            position: relative;
+        }
+        a.cta-button {
+            position: absolute;
+            bottom: 0.6em;
+            left: 50%;
+            transform: translateX(-50%) skew(-12deg);
+        }
+        h1, h2, h3 {
+            color: $color_dark_purple;
+        }
+        a:not([class]) {
+            color: $color_dark_purple;
+
+            &:hover {
+                color: $color_pink;
+            }
+        }
+    }
+}
