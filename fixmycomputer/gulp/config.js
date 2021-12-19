@@ -38,7 +38,6 @@ const CONFIG = {
                 'assets/js/global.js',
                 'assets/js/vendor/slick/slick.min.js',
                 'assets/js/vendor/mmenu-light/mmenu-light.js'
-                // 'assets/js/vendor/maskedinput/jquery.maskedinput.js',
             ]
         },
         {

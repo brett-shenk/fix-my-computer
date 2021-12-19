@@ -128,8 +128,7 @@ function the_site_copyright(){
     <section class="site-copyright" aria-label="Site Copyright">
         <div class="column-container wrapper">
             <div class="column">
-                &copy;<?php echo date('Y'); ?>. 
-                <?php echo $text; ?>
+                &copy; 2015-<?php echo date('Y'); ?> <?php echo $text; ?>
             </div>
             <div class="column">
                 <?php if( $the_links ){

@@ -1,10 +1,22 @@
 /*******************
 * Contact
 *******************/
-.site-main .wpcf7 {
-    input[type="submit"]:hover{
-        background-color: $color_pink;
+.cta-button.-form{
+    padding: 0;
+    margin-top: 1em;
+    
+    input {
+        border: 0;
+        background: transparent;
+        padding: 1em 1.5em;
+        font-size: 1em;
+        color: $color_white;
+        font-weight: 700;
+        text-transform: uppercase;
     }
+}
+
+.site-main .wpcf7 {
     label {
         font-weight: 700;
         margin: 1em 0 0 0;
@@ -15,7 +27,19 @@
             color: $color_error;
         }
     }
-    textarea {
-        margin: 0 0 1.5em 0;
+    .wpcf7-response-output {
+        color: $color_error;
+        background-color: #cfcfcf;
+        box-shadow: 2px 4px 9px -4px black;
+        margin-top: 1.5em;
+        
+        &:not(:empty){
+            padding: 1.1em;
+        }
     }
+}
+.wpcf7-not-valid-tip {
+    color: $color_error;
+    font-size: .9em;
+    font-style: italic;
 }

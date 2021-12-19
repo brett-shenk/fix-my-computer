@@ -166,6 +166,8 @@
                 min-width: 7.2em;
                 margin-left: -0.7em;
                 margin-right: .5em;
+                font-size: 1em;
+                padding: 0.7em 1.4em;
             }
         }
         .newsletter-thanks {
@@ -179,7 +181,22 @@
                 display: block;
             }
         }
-        // .wpcf7-response-output
+        .wpcf7-form-control-wrap {
+            position: relative;
+
+            .wpcf7-not-valid-tip {
+                position: absolute;
+                left: 0;
+                bottom: -1.3em;
+            }
+        }
+        .wpcf7-response-output {
+            color: $color_error;
+            
+            &:not(:empty){
+                margin-top: 2.1em;
+            }
+        }
     }
 }
 .site-copyright {
