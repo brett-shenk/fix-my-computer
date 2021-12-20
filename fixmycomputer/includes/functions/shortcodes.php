@@ -33,4 +33,29 @@ if ( defined( 'WPCF7_VERSION' ) ) {
 	add_filter('wpcf7_form_class_attr', function($html_class) {
 		return $html_class;
 	});
+
+	/**
+	 * functions to allow the data attribute
+	 * NOTE: CF7 still won't work with certain characters, such as: () 
+	 * 
+	 * Shortcode:	[tel phone_number data-phonemask:___-___-____ class:masked-phone]
+	 * Output:		<input type="tel" name="phone_number" data-phonemask="___-___-____" value="" size="40" class="masked-phone">
+	**/
+	add_filter( 'wpcf7_form_tag', function ( $tag ) {
+		$datas = [];
+		foreach ( (array)$tag['options'] as $option ) {
+			if ( strpos( $option, 'data-' ) === 0 ) {
+				$option = explode( ':', $option, 2 );
+				$datas[$option[0]] = apply_filters('wpcf7_option_value', $option[1], $option[0]);
+			}
+		}
+		if ( ! empty( $datas ) ) {
+			$name = $tag['name'];
+			$tag['name'] = $id = uniqid('wpcf');
+			add_filter( 'wpcf7_form_elements', function ($content) use ($name, $id, $datas) {
+				return str_replace($id, $name, str_replace("name=\"$id\"", "name=\"$name\" ". wpcf7_format_atts($datas), $content));
+			});
+		}
+		return $tag;
+	} );
 }

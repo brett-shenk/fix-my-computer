@@ -37,7 +37,8 @@ const CONFIG = {
             "js": [
                 'assets/js/global.js',
                 'assets/js/vendor/slick/slick.min.js',
-                'assets/js/vendor/mmenu-light/mmenu-light.js'
+                'assets/js/vendor/mmenu-light/mmenu-light.js',
+                'assets/js/vendor/phone-mask/phone-mask.min.js'
             ]
         },
         {

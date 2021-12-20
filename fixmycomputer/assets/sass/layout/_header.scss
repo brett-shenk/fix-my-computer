@@ -29,6 +29,7 @@
 }
 .logo {
     line-height: 0;
+    color: $color_white;
 
     .mobile {
         max-height: 129px;
@@ -70,6 +71,7 @@ body {
 .banner-container {
     &[data-layout-type="banner"]{
         position: relative;
+        background-color: $color_black;
 
         &:before {
             @include pseudo-element;

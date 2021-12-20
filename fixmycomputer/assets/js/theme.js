@@ -37,20 +37,20 @@ var checkScroll = function () {
 };
 var toggleHeader = function (direction, curScroll) {
 	if (direction === 2 && curScroll > 100) {
-		the_header.classList.add("hide");
+		the_header.classList.add('hide');
 		prevDirection = direction;
 	} else if (direction === 1) {
-		the_header.classList.remove("hide");
+		the_header.classList.remove('hide');
 		prevDirection = direction;
 	}
 };
-window.addEventListener("scroll", checkScroll);
+window.addEventListener('scroll', checkScroll);
 
 
 /**
  * Functions on Doc Ready
 **/
-document.addEventListener("DOMContentLoaded", function(event){ 
+document.addEventListener('DOMContentLoaded', function(event){ 
 
 	if( $('.home-slider').length ){
 		$('.home-slider').slick({
@@ -76,8 +76,8 @@ document.addEventListener("DOMContentLoaded", function(event){
 	 * Mobile Menu
 	**/
 	const menu = new MmenuLight(
-		document.querySelector( "nav.main-nav" ),
-		"(max-width: 1300px)"
+		document.querySelector( 'nav.main-nav' ),
+		'(max-width: 1300px)'
 	);
 	const navigator = menu.navigation({
 		title: 'Fix My Computer',
@@ -87,12 +87,12 @@ document.addEventListener("DOMContentLoaded", function(event){
 		position: 'right',
 	});
 
-	document.querySelector( ".hamburger" ).addEventListener( "click", function( event ){
+	document.querySelector( '.hamburger' ).addEventListener( 'click', function( event ){
 		event.preventDefault();
         drawer.open();
 
 		if(global_phone && global_email) {
-			$( ".mm-ocd__content" ).append( '\
+			$( '.mm-ocd__content' ).append( '\
 			<div class="mm-ocd-bottom-nav">\
 				<a href="mailto:'+ global_email +'">\
 					<i class="icon-email"></i>\
@@ -103,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 			</div>\
 			' );
 		} else if(global_phone) {
-			$( ".mm-ocd__content" ).append( '\
+			$( '.mm-ocd__content' ).append( '\
 			<div class="mm-ocd-bottom-nav">\
 				<a href="tel:+1'+ global_phone +'">\
 					<i class="icon-phone"></i>\
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function(event){
 			</div>\
 			' );
 		} else if(global_email) {
-			$( ".mm-ocd__content" ).append( '\
+			$( '.mm-ocd__content' ).append( '\
 			<div class="mm-ocd-bottom-nav">\
 				<a href="mailto:'+ global_email +'">\
 					<i class="icon-email"></i>\
@@ -127,9 +127,17 @@ document.addEventListener("DOMContentLoaded", function(event){
 /**
  * Functions on Window Loaded
 **/
-window.addEventListener("load", function(){
+window.addEventListener('load', function(){
 
 	hidePreloader();
+
+	if( $('.site-main .wpcf7').length ){
+		// setTimeout(function(){
+		// }, 1000);
+		waitForFinalEvent(function(){
+			cf7_form_loaded();
+		}, 500);
+	}
 
 });
 
@@ -140,7 +148,7 @@ window.addEventListener("load", function(){
  * Hidden after page is done loading
 **/
 function hidePreloader() {
-	var preloader = $("#preload-container");
+	var preloader = $('#preload-container');
 	preloader.fadeOut(200);
 }
 
@@ -154,15 +162,54 @@ window.addEventListener('resize', function(event){
 
 
 /**
- * Contact Form 7
+ * Contact Form 7 Functions
 **/
-// CF7 On Submit
-document.addEventListener( "wpcf7mailsent", function( event ) {
-	// var siteURL = window.location.protocol + "//" + window.location.hostname;
+if( $('.site-main .wpcf7').length ){
+	// Form label animation
+	$( '.wpcf7' ).delegate( 'input, textarea', 'focus', function(element) {
+		var input = element.target;
+		var label = element.target.parentElement.parentElement.querySelector('label');
+
+		// On focus
+		label.style.top = '-0.5em';
+		label.style.left = '0.4em';
+		label.style.fontSize = '0.9em';
+	});
+	$( '.wpcf7' ).delegate( 'input, textarea', 'focusout', function(element) {
+		var input = element.target;
+		var label = element.target.parentElement.parentElement.querySelector('label');
+
+		// On focus out
+		if( input.value == '' ){
+			label.style.top = '0.7em';
+			label.style.left = '0.6em';
+			label.style.fontSize = '1.1em';
+		}
+	});
+}
+function cf7_form_loaded(){
+	// Triggers on page load to prevent filled fields being covered
+	var inputs = document.querySelectorAll('.site-main .wpcf7 .wpcf7-form-control');
+	inputs.forEach(function(input){
+		var input_classes = input.classList;
+		var label = input.parentElement.parentElement.querySelector('label');
+		if( !input_classes.contains('wpcf7-submit') ){
+			if( input.value != '' ){
+				label.style.top = '-0.5em';
+				label.style.left = '0.4em';
+				label.style.fontSize = '0.9em';
+			}
+		}
+	});
+}
+
+// On Submit
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+	// var siteURL = window.location.protocol + '//' + window.location.hostname;
 	
-	if ( "817" == event.detail.contactFormId ) {
+	if ( '817' == event.detail.contactFormId ) {
         // Form redirect for the CF7 form with the 817 ID
-		// location = siteURL + "/thank-you-quote/";
+		// location = siteURL + '/thank-you-quote/';
 	} else {
         // All other forms
 	}

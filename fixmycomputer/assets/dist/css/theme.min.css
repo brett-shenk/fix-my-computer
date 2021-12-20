@@ -232,7 +232,7 @@ address { font-style: normal; }
 
 .site-header.hide { top: -250px !important; }
 
-.logo { line-height: 0; }
+.logo { line-height: 0; color: #fff; }
 
 .logo .mobile { max-height: 129px; width: auto; }
 
@@ -250,7 +250,7 @@ body.admin-bar .site-header { top: 2em; }
 
 @media (max-width: 48.875em) { body.admin-bar .site-header { top: 2.8em; } }
 
-.banner-container[data-layout-type="banner"] { position: relative; }
+.banner-container[data-layout-type="banner"] { position: relative; background-color: #000; }
 
 .banner-container[data-layout-type="banner"]:before { content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.5); }
 
@@ -448,7 +448,7 @@ label[for] { cursor: pointer; }
 
 .wpcf7-form .two-col .input-wrap { width: 50%; }
 
-.wpcf7-form .two-col .input-wrap:first-of-type { margin-right: 1.1em; }
+.wpcf7-form .two-col .input-wrap:first-of-type { margin-right: 1.5em; }
 
 .input-wrap.height-fix { line-height: 0; }
 
@@ -657,11 +657,17 @@ body { min-height: 90vh; }
 /*******************
 * Contact
 *******************/
-.cta-button.-form { padding: 0; margin-top: 1em; }
+.cta-button.-form { padding: 0; }
 
 .cta-button.-form input { border: 0; background: transparent; padding: 1em 1.5em; font-size: 1em; color: #fff; font-weight: 700; text-transform: uppercase; }
 
-.site-main .wpcf7 label { font-weight: 700; margin: 1em 0 0 0; padding: 0 0 .3em 0; display: inline-block; }
+.site-main .wpcf7 form { padding-top: 3.7em; }
+
+.site-main .wpcf7 input[type="text"], .site-main .wpcf7 input[type="email"], .site-main .wpcf7 input[type="tel"], .site-main .wpcf7 input[type="number"], .site-main .wpcf7 textarea { padding: 0.8em; }
+
+.site-main .wpcf7 .input-wrap { position: relative; margin-bottom: 1.5em; }
+
+.site-main .wpcf7 label { background-color: white; display: inline-block; padding: 0 0.4em; pointer-events: none; position: absolute; top: 0.7em; left: 0.6em; font-size: 1.1em; font-weight: 500; transition: .25s all ease; }
 
 .site-main .wpcf7 label em { color: #DB2525; }
 

@@ -3,7 +3,6 @@
 *******************/
 .cta-button.-form{
     padding: 0;
-    margin-top: 1em;
     
     input {
         border: 0;
@@ -17,11 +16,27 @@
 }
 
 .site-main .wpcf7 {
+    form {
+        padding-top: 3.7em;
+    }
+    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+        padding: 0.8em;
+    }
+    .input-wrap {
+        position: relative;
+        margin-bottom: 1.5em;
+    }
     label {
-        font-weight: 700;
-        margin: 1em 0 0 0;
-        padding: 0 0 .3em 0;
+        background-color: white;
         display: inline-block;
+        padding: 0 0.4em;
+        pointer-events: none;
+        position: absolute;
+        top: 0.7em;
+        left: 0.6em;
+        font-size: 1.1em;
+        font-weight: 500;
+        transition: .25s all ease;
 
         em {
             color: $color_error;

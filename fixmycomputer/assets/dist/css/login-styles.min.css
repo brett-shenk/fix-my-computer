@@ -142,7 +142,7 @@ label[for] { cursor: pointer; }
 
 .wpcf7-form .two-col .input-wrap { width: 50%; }
 
-.wpcf7-form .two-col .input-wrap:first-of-type { margin-right: 1.1em; }
+.wpcf7-form .two-col .input-wrap:first-of-type { margin-right: 1.5em; }
 
 .input-wrap.height-fix { line-height: 0; }
 
