@@ -256,7 +256,7 @@ body.admin-bar .site-header { top: 2em; }
 
 .banner-container[data-layout-type="banner"] .entry-title { position: absolute; top: 50%; left: 0; right: 0; color: #fff; transform: translateY(-50%); transform-origin: bottom; text-align: center; -webkit-animation-name: zoomIn; animation-name: zoomIn; -webkit-animation-duration: 2.5s; animation-duration: 2.5s; }
 
-.banner-container[data-layout-type="text"] .entry-title { color: #291B4B; text-align: center; margin: 1em .5em 1.5em .5em; }
+.banner-container[data-layout-type="text"] .entry-title { color: #291B4B; text-align: center; margin: 1em .5em 1em .5em; }
 
 .banner-container[data-layout-type="text"] ~ .rank-math-breadcrumb p { border-top: 1px solid #3E267B; }
 
@@ -676,6 +676,25 @@ body { min-height: 90vh; }
 .site-main .wpcf7 .wpcf7-response-output:not(:empty) { padding: 1.1em; }
 
 .wpcf7-not-valid-tip { color: #DB2525; font-size: .9em; font-style: italic; }
+
+/*******************
+* Sitemap
+*******************/
+.sitemap-module { margin-top: 3em; display: flex; justify-content: space-evenly; }
+
+.sitemap-module .column { max-width: 240px; width: 100%; }
+
+.sitemap-module .column ul { padding-left: 1.4em; }
+
+.sitemap-module .column li { margin-bottom: 0.4em; }
+
+.sitemap-module .column a { line-height: 1.4em; position: relative; display: inline-block; }
+
+.sitemap-module .column a:before { content: ''; border-bottom-width: 2px; border-bottom-style: solid; width: 0; transition: width .5s ease; position: absolute; bottom: -1px; }
+
+.sitemap-module .column a:hover { color: #e31c79; }
+
+.sitemap-module .column a:hover:before { border-bottom-color: #e31c79; width: 100%; }
 
 @media print { * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; }
   a:link, a:visited { color: black !important; text-decoration: underline; }

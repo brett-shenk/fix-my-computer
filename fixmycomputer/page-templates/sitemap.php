@@ -1,7 +1,7 @@
 <?php
 /**
  * Template Name: Sitemap
- */
+**/
 
 /**********************************************************
  *                      HOW TO USE
@@ -26,7 +26,7 @@ function sitemap_main_content(){
 
     <section class="wrapper sitemap-module">
         <?php // Displaying all pages on the site, except those picked above  ?>
-        <div>
+        <div class="column">
             <h3>Pages</h3>
             <ul>
                 <?php
@@ -38,31 +38,29 @@ function sitemap_main_content(){
                 )); ?>
             </ul>
         </div>
+        <div class="column">
+            <h3>Services</h3>
+            <?php
+            $service_page = get_page_by_path( 'services' );
+            $loop = new WP_Query( array(
+                'post_type'      => 'page',
+                'post_status'    => array('publish', 'private'),
+                'orderby'        => 'menu_order',
+                'posts_per_page' => '-1',
+                'order'          => 'ASC',
+                'post_parent'    => $service_page->ID,
+            ) );
 
-        <?php // Custom Post Type displaying all news/blog posts
-        /*?>
-        <div>
-            <h3>News & Events</h3>
-            <?php $args = array(
-                'post_type'     => 'sh_news',
-                'post_status'   => 'publish',
-                'posts_per_page'=> -1,
-                'offset'        => 0,
-                'order'         => 'DESC',
-                'orderby'       => 'date'
-            );              
-            
-            $the_query = new WP_Query( $args );
-            if($the_query->have_posts() ){
+            if( $loop->have_posts() ){
                 echo '<ul>';
-                while ( $the_query->have_posts() ){
-                   $the_query->the_post(); 
-                   echo '<li class="sitemap_item"><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
+                while( $loop->have_posts() ){
+                    $loop->the_post();
+                    echo '<li><a href="' . get_permalink() . '">' . get_the_title() . '</a></li>';
                 }
-                wp_reset_postdata(); 
                 echo '</ul>';
             }
-            */ ?>
+            wp_reset_postdata();
+            ?>
         </div>
     </section>
 <?php }

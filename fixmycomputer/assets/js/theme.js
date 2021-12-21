@@ -132,8 +132,6 @@ window.addEventListener('load', function(){
 	hidePreloader();
 
 	if( $('.site-main .wpcf7').length ){
-		// setTimeout(function(){
-		// }, 1000);
 		waitForFinalEvent(function(){
 			cf7_form_loaded();
 		}, 500);
