@@ -696,6 +696,10 @@ body { min-height: 90vh; }
 
 .sitemap-module .column a:hover:before { border-bottom-color: #e31c79; width: 100%; }
 
+body.privacy-policy article.entry > section > .wrapper { max-width: 81.3em; }
+
+body.privacy-policy article.entry > section h3 { font-size: 1.4em; }
+
 @media print { * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; }
   a:link, a:visited { color: black !important; text-decoration: underline; }
   pre, blockquote { border: 1px solid black; page-break-inside: avoid; }
