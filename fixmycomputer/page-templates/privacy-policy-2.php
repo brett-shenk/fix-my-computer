@@ -8,12 +8,19 @@ function privacy_policy_main_content(){ ?>
 
 
 <style>
+    html {
+        scroll-behavior: smooth;
+    }
     td {
         border: 1px solid black;
         padding: 1em;
     }
     body.privacy-policy section > .wrapper {
         max-width: 81.3em;
+    }
+    h2 {
+        font-size: 2em;
+        margin-top: 1em;
     }
     h3 {
         font-size: 1.4em;
@@ -30,11 +37,11 @@ function privacy_policy_main_content(){ ?>
         ("<strong>Fix My Computer</strong>", "<strong>we</strong>", "<strong>us</strong>", 
         or "<strong>our</strong>"). We are committed to protecting your personal information and your right to privacy. If you have any 
         questions or concerns about this privacy notice or our practices with regard to your personal information, please contact 
-        us at fixmycomputer&commat;<span>dejazzd.com</span>.
+        us at <a href="mailto:fixmycomputer@dejazzd.com">fixmycomputer@dejazzd.com</a>.
     </p>
     <p style="margin-bottom: 0;">This privacy notice describes how we might use your information if you:</p>
     <ul>
-        <li>Visit our website at https://www.fixmycomputercentralpa.com/</li>
+        <li>Visit our website at <a href="https://www.fixmycomputercentralpa.com/">https://www.fixmycomputercentralpa.com/</a></li>
         <li>Engage with us in other related ways - including any sales, marketing, or events</li>
     </ul>
     <p style="margin-bottom: 0;">In this privacy notice, if we refer to:</p>
@@ -52,22 +59,22 @@ function privacy_policy_main_content(){ ?>
     <h2>TABLE OF CONTENTS</h2>
 
     <ol>
-        <li><a href="#">WHAT INFORMATION DO WE COLLECT?</a></li>
-        <li><a href="#">HOW DO WE USE YOUR INFORMATION?</a></li>
-        <li><a href="#">WILL YOUR INFORMATION BE SHARED WITH ANYONE?</a></li>
-        <li><a href="#">WHO WILL YOUR INFORMATION BE SHARED WITH?</a></li>
-        <li><a href="#">DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</a></li>
-        <li><a href="#">HOW LONG DO WE KEEP YOUR INFORMATION?</a></li>
-        <li><a href="#">HOW DO WE KEEP YOUR INFORMATION SAFE?</a></li>
-        <li><a href="#">WHAT ARE YOUR PRIVACY RIGHTS?</a></li>
-        <li><a href="#">CONTROLS FOR DO-NOT-TRACK FEATURES</a></li>
-        <li><a href="#">DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</a></li>
-        <li><a href="#">DO WE MAKE UPDATES TO THIS NOTICE?</a></li>
-        <li><a href="#">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a></li>
-        <li><a href="#">HOW CAN YOU REVIEW, UPDATE OR DELETE THE DATA WE COLLECT FROM YOU?</a></li>
+        <li><a href="#privacy-sect-1">WHAT INFORMATION DO WE COLLECT?</a></li>
+        <li><a href="#privacy-sect-2">HOW DO WE USE YOUR INFORMATION?</a></li>
+        <li><a href="#privacy-sect-3">WILL YOUR INFORMATION BE SHARED WITH ANYONE?</a></li>
+        <li><a href="#privacy-sect-4">WHO WILL YOUR INFORMATION BE SHARED WITH?</a></li>
+        <li><a href="#privacy-sect-5">DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</a></li>
+        <li><a href="#privacy-sect-6">HOW LONG DO WE KEEP YOUR INFORMATION?</a></li>
+        <li><a href="#privacy-sect-7">HOW DO WE KEEP YOUR INFORMATION SAFE?</a></li>
+        <li><a href="#privacy-sect-8">WHAT ARE YOUR PRIVACY RIGHTS?</a></li>
+        <li><a href="#privacy-sect-9">CONTROLS FOR DO-NOT-TRACK FEATURES</a></li>
+        <li><a href="#privacy-sect-10">DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</a></li>
+        <li><a href="#privacy-sect-11">DO WE MAKE UPDATES TO THIS NOTICE?</a></li>
+        <li><a href="#privacy-sect-12">HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</a></li>
+        <li><a href="#privacy-sect-13">HOW CAN YOU REVIEW, UPDATE OR DELETE THE DATA WE COLLECT FROM YOU?</a></li>
     </ol>
 
-    <h2 id="">1. WHAT INFORMATION DO WE COLLECT?</h2>
+    <h2 id="privacy-sect-1">1. WHAT INFORMATION DO WE COLLECT?</h2>
 
     <h3>Personal information you disclose to us</h3>
 
@@ -124,7 +131,7 @@ function privacy_policy_main_content(){ ?>
         </li>
     </ul>
 
-    <h2>2. HOW DO WE USE YOUR INFORMATION?</h2>
+    <h2 id="privacy-sect-2">2. HOW DO WE USE YOUR INFORMATION?</h2>
 
     <p><span style="font-style: italic;">
         <strong>In Short:</strong>  We process your information for purposes based on legitimate business interests, the fulfillment of our contract 
@@ -158,8 +165,8 @@ function privacy_policy_main_content(){ ?>
             <strong>To send you marketing and promotional communications.</strong> We and/or our third-party marketing partners may use the personal 
             information you send to us for our marketing purposes, if this is in accordance with your marketing preferences. For example, 
             when expressing an interest in obtaining information about us or our Website, subscribing to marketing or otherwise contacting us, 
-            we will collect personal information from you. You can opt-out of our marketing emails at any time (see the "WHAT ARE YOUR PRIVACY 
-            RIGHTS?" below).
+            we will collect personal information from you. You can opt-out of our marketing emails at any time (see the "<a href="#privacy-sect-8">WHAT ARE YOUR PRIVACY 
+            RIGHTS?</a>" below).
         </li>
         <li>
             <strong>Deliver targeted advertising to you.</strong> We may use your information to develop and display personalized content and 
@@ -168,7 +175,7 @@ function privacy_policy_main_content(){ ?>
         <li>Website Improvement.</li>
     </ul>
 
-    <h2>3. WILL YOUR INFORMATION BE SHARED WITH ANYONE?</h2>
+    <h2 id="privacy-sect-3">3. WILL YOUR INFORMATION BE SHARED WITH ANYONE?</h2>
 
     <p><span style="font-style: italic;">
         <strong>In Short:</strong>  We only share information with your consent, to comply with laws, to provide you with services, to protect your 
@@ -221,15 +228,15 @@ function privacy_policy_main_content(){ ?>
         </li>
     </ul>
 
-    <h2>4. WHO WILL YOUR INFORMATION BE SHARED WITH?</h2>
+    <h2 id="privacy-sect-4">4. WHO WILL YOUR INFORMATION BE SHARED WITH?</h2>
 
     <p><span style="font-style: italic;">
         <strong>In Short:</strong>  We only share information with the following third parties.
     </span></p>
     <p>
         We only share and disclose your information with the following third parties. If we have processed your data based on your consent and 
-        you wish to revoke your consent, please contact us using the contact details provided in the section below titled "HOW CAN YOU CONTACT US 
-        ABOUT THIS NOTICE?".
+        you wish to revoke your consent, please contact us using the contact details provided in the section below titled "<a href="#privacy-sect-12">HOW CAN YOU CONTACT US 
+        ABOUT THIS NOTICE?</a>".
     </p>
     <ul>
         <li>
@@ -262,7 +269,7 @@ function privacy_policy_main_content(){ ?>
         </li>
     </ul>
 
-    <h2>5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</h2>
+    <h2 id="privacy-sect-5">5. DO WE USE COOKIES AND OTHER TRACKING TECHNOLOGIES?</h2>
 
     <p><span style="font-style: italic;">
         <strong>In Short:</strong>  We may use cookies and other tracking technologies to collect and store your information.
@@ -272,7 +279,7 @@ function privacy_policy_main_content(){ ?>
         Specific information about how we use such technologies and how you can refuse certain cookies is set out in our Cookie Notice.
     </p>
 
-    <h2>6. HOW LONG DO WE KEEP YOUR INFORMATION?</h2>
+    <h2 id="privacy-sect-6">6. HOW LONG DO WE KEEP YOUR INFORMATION?</h2>
 
     <p><span style="font-style: italic;">
         <strong>In Short:</strong>  We keep your information for as long as necessary to fulfill the purposes outlined in this privacy notice 
@@ -289,7 +296,7 @@ function privacy_policy_main_content(){ ?>
         will securely store your personal information and isolate it from any further processing until deletion is possible.
     </p>
     
-    <h2>7. HOW DO WE KEEP YOUR INFORMATION SAFE?</h2>
+    <h2 id="privacy-sect-7">7. HOW DO WE KEEP YOUR INFORMATION SAFE?</h2>
 
     <p><span style="font-style: italic;">
         <strong>In Short:</strong>  We aim to protect your personal information through a system of organizational and technical security measures.
@@ -303,7 +310,7 @@ function privacy_policy_main_content(){ ?>
         only access the Website within a secure environment.
     </p>
 
-    <h2>8. WHAT ARE YOUR PRIVACY RIGHTS?</h2>
+    <h2 id="privacy-sect-8">8. WHAT ARE YOUR PRIVACY RIGHTS?</h2>
 
     <p><span style="font-style: italic;">
         <strong>In Short:</strong> You may review, change, or terminate your account at any time.
@@ -311,19 +318,20 @@ function privacy_policy_main_content(){ ?>
     <p>
         If you are a resident in the EEA or UK and you believe we are unlawfully processing your personal information, you also have the right to 
         complain to your local data protection supervisory authority. You can find their contact details here: 
-        https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm.
+        <a href="https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm" target="_blank" rel="noopener">https://ec.europa.eu/justice/data-protection/bodies/authorities/index_en.htm</a>.
     </p>
     <p>
         If you are a resident in Switzerland, the contact details for the data protection authorities are available here: 
-        https://www.edoeb.admin.ch/edoeb/en/home.html.
+        <a href="https://www.edoeb.admin.ch/edoeb/en/home.html" target="_blank" rel="noopener">https://www.edoeb.admin.ch/edoeb/en/home.html</a>.
     </p>
     <p>
         Cookies and similar technologies: Most Web browsers are set to accept cookies by default. If you prefer, you can usually choose to set 
         your browser to remove cookies and to reject cookies. If you choose to remove cookies or reject cookies, this could affect certain features 
-        or services of our Website. To opt-out of interest-based advertising by advertisers on our Website visit http://www.aboutads.info/choices/.
+        or services of our Website. To opt-out of interest-based advertising by advertisers on our Website visit 
+        <a href="http://www.aboutads.info/choices/" target="_blank" rel="noopener">http://www.aboutads.info/choices/</a>.
     </p>
 
-    <h2>9. CONTROLS FOR DO-NOT-TRACK FEATURES</h2>
+    <h2 id="privacy-sect-9">9. CONTROLS FOR DO-NOT-TRACK FEATURES</h2>
 
     <p>
         Most web browsers and some mobile operating systems and mobile applications include a Do-Not-Track ("DNT") feature or setting you can activate 
@@ -333,7 +341,7 @@ function privacy_policy_main_content(){ ?>
         is adopted that we must follow in the future, we will inform you about that practice in a revised version of this privacy notice. 
     </p>
 
-    <h2>10. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</h2>
+    <h2 id="privacy-sect-10">10. DO CALIFORNIA RESIDENTS HAVE SPECIFIC PRIVACY RIGHTS?</h2>
 
     <p><span style="font-style: italic;">
         <strong>In Short:</strong>  Yes, if you are a resident of California, you are granted specific rights regarding access to your 
@@ -479,7 +487,8 @@ function privacy_policy_main_content(){ ?>
         More information about our data collection and sharing practices can be found in this privacy notice.
     </p>
     <p>
-        You may contact us by visiting https://www.fixmycomputercentralpa.com/, or by referring to the contact details at the bottom of this document.
+        You may contact us by visiting <a href="https://www.fixmycomputercentralpa.com/">https://www.fixmycomputercentralpa.com/</a>, or by 
+        referring to the contact details at the bottom of this document.
     </p>
     <p>
         If you are using an authorized agent to exercise your right to opt-out we may deny a request if the authorized agent does not submit proof that 
@@ -513,7 +522,7 @@ function privacy_policy_main_content(){ ?>
     </ul>
     <p>
         The categories of third parties to whom we disclosed personal information for a business or commercial purpose can be found 
-        under "WHO WILL YOUR INFORMATION BE SHARED WITH?"
+        under "<a href="#privacy-sect-3">WHO WILL YOUR INFORMATION BE SHARED WITH?</a>"
     </p>
     <p>
         Fix My Computer has not sold any personal information to third parties for a business or commercial purpose in the preceding 
@@ -577,11 +586,12 @@ function privacy_policy_main_content(){ ?>
         </li>
     </ul>
     <p>
-        To exercise these rights, you can contact us by visiting https://www.fixmycomputercentralpa.com/, or by referring to the contact 
-        details at the bottom of this document. If you have a complaint about how we handle your data, we would like to hear from you.  
+        To exercise these rights, you can contact us by visiting <a href="https://www.fixmycomputercentralpa.com/">https://www.fixmycomputercentralpa.com/</a>, 
+        or by referring to the contact details at the bottom of this document. If you have a complaint about how we handle your data, we would like to 
+        hear from you.  
     </p>
 
-    <h2>11. DO WE MAKE UPDATES TO THIS NOTICE?</h2>
+    <h2 id="privacy-sect-11">11. DO WE MAKE UPDATES TO THIS NOTICE?</h2>
 
     <p><span style="font-style: italic;">
         <strong>In Short:</strong>  Yes, we will update this notice as necessary to stay compliant with relevant laws.
@@ -593,27 +603,22 @@ function privacy_policy_main_content(){ ?>
         frequently to be informed of how we are protecting your information.
     </p>
 
-    <h2>12. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</h2>
+    <h2 id="privacy-sect-12">12. HOW CAN YOU CONTACT US ABOUT THIS NOTICE?</h2>
 
-    <p>If you have questions or comments about this notice, you may email us at brett.shenk5&commat;<span>gmail.com</span> or by post to:</p>
+    <p>If you have questions or comments about this notice, you may email us at <a href="mailto:brett.shenk5@gmail.com">brett.shenk5@gmail.com</a> or by post to:</p>
     <address>
         Fix My Computer<br>
         11 South Main St.<br>
         Manheim, PA 17545<br>
         United States
     </address>
-    <br>
 
-    <h2>13. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</h2>
+    <h2 id="privacy-sect-13">13. HOW CAN YOU REVIEW, UPDATE, OR DELETE THE DATA WE COLLECT FROM YOU?</h2>
 
     <p>
         Based on the applicable laws of your country, you may have the right to request access to the personal information we collect from you, 
         change that information, or delete it in some circumstances. To request to review, update, or delete your personal information, please 
-        submit a request form by clicking here.
-    </p>
-    <p>
-        This privacy policy was created using Termly's 
-        <a href="https://termly.io/products/privacy-policy-generator/" target="_blank" rel="noopener">Privacy Policy Generator.</a>
+        submit a request form by <a href="/contact-us/">going here</a>.
     </p>
 
 
