@@ -7,14 +7,14 @@
     box-shadow: -2px 4px 10px 0px #141414;
     transition: all .25s ease;
 
+    & > .wrapper {
+        height: 131px;
+    }
     .wrapper {
         display: flex;
 
         @media (max-width: 1300px) {
             justify-content: space-between;
-        }
-        @media (max-width: 48.875em) {          // 782px
-            min-height: 131px;
         }
         & > a {
             flex-grow: 0;

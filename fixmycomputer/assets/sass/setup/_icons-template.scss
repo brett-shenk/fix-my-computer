@@ -1,9 +1,9 @@
-/******************************************************************
-* PREVIEW The SVG Here
-* https://icomoon.io/app/#/select
-* 
-* GENERATED FILE
-******************************************************************/
+/**
+ * PREVIEW The SVG Here
+ * https://icomoon.io/app/#/select
+ * 
+ * GENERATED FILE
+**/
 
 @font-face {
 	font-family: '<%= fontName %>';
@@ -58,12 +58,12 @@
 <% }); %>
 
 
-/******************************************************************
-* Custom Icons
-
-* WARNING: Edit  icons-template.scss
-* TIP: [class*='icon-'] to target any icon
-******************************************************************/
+/**
+ * Custom Icons
+ * 
+ * WARNING: Edit  icons-template.scss
+ * TIP: [class*='icon-'] to target any icon
+**/
 .checkbox-wrap  {
 	@include icon(done);
 }

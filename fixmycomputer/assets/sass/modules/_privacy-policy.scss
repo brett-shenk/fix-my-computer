@@ -1,10 +1,25 @@
-body.privacy-policy {
+body.page-template-slim-layout .site-main,
+body.privacy-policy.page-template .site-main{
     section {
         & > .wrapper {
-            max-width: 81.3em;
+            max-width: 81.3em;  // does it to the footer as well as the content
+        }
+    }
+    section .wrapper {
+        h2 {
+            font-size: 2em;
+            padding-top: 1em;
         }
         h3 {
             font-size: 1.4em;
+        }
+        ul, ol {
+            line-height: 1.857;
+            margin-top: 0;
+        }
+        td {
+            border: 1px solid black;
+            padding: 1em;
         }
     }
 }

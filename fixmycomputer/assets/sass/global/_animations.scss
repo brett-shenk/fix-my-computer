@@ -1,6 +1,6 @@
-/********************************************************
+/**
  * Draw Line Animation
-********************************************************/
+**/
 @mixin link_draw_line( $color: $color_pink ){
     position: relative;
     display: inline-block;
@@ -24,9 +24,9 @@
     }
 }
 
-/********************************************************
+/**
  * Zoom In Animation
-********************************************************/
+**/
 // animation-name: zoomIn;
 // animation-duration: 2.5s;
 @keyframes zoomIn {

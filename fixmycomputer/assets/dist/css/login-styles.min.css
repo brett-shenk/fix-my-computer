@@ -1,44 +1,41 @@
 *, *:before, *:after { box-sizing: border-box; }
 
-/********************************************************
+/**
  * SIZES 
-********************************************************/
-/********************************************************
+**/
+/**
  * COLORS
-********************************************************/
-/********************************************************/
-/********************************************************/
-/********************************************************
+**/
+/**
+ * Files Paths
+**/
+/**
  * TYPOGRAPHY
- * 
- * .EOT is meant for IE browsers, like 8 and below
- * .TTF goes back to the 1980's
- * .WOFF2 & .WOFF are the recommended formats, in order
-********************************************************/
-/********************************************************
- * SOCIAL COLORS - http://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
-********************************************************/
-/********************************************************
+**/
+/**
+ * SOCIAL COLORS
+**/
+/**
  * Helpful Classes 
-********************************************************/
+**/
 .hidden { display: none !important; }
 
-/********************************************************
+/**
  * Screen Reader Text
-********************************************************/
+**/
 .sr-only, .screen-reader-text { border: 0 !important; clip: rect(1px, 1px, 1px, 1px) !important; -webkit-clip-path: inset(50%) !important; clip-path: inset(50%) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; white-space: nowrap !important; }
 
-/********************************************************
+/**
  * Dynamically Generate z-index based on name position
  * 
  * How to use:    map-get($z-layers, "z-index-menu");
-******************************************************/
-/********************************************************
+**/
+/**
  * Mixins
-********************************************************/
-/********************************************************
+**/
+/**
  * TYPOGRAPHY
-********************************************************/
+**/
 body { font-weight: 400; font-family: "Roboto", Helvetica, Arial, sans-serif; line-height: 1.2; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "Roboto", Helvetica, Arial, sans-serif; font-weight: 700; line-height: normal; margin: 0; }
@@ -91,9 +88,9 @@ a, sup, sub, del, li, td, th, summary { font-family: "Roboto", Helvetica, Arial,
 
 button.cta-button { border: 0; }
 
-/********************************************************
+/**
  * Strip Browsers of Specific Form Styles
-********************************************************/
+**/
 
 :focus::-moz-placeholder { color: transparent; }
 
@@ -119,9 +116,9 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
 
 input[type=number] { -moz-appearance: textfield; }
 
-/********************************************************
+/**
  * Generic Form Styles
-********************************************************/
+**/
 input:focus, textarea:focus { outline-width: 2px; outline-style: solid; outline-color: Highlight; }
 
 input[type="text"], input[type="password"], input[type="search"], input[type="email"], input[type="url"], input[type="tel"], input[type="number"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], textarea, select { width: 100%; max-width: 100%; padding: 0.5em; border: 1px solid #BBB; border-radius: 0; font-size: 1em; font-family: Arial, sans-serif; }
@@ -150,9 +147,9 @@ label[for] { cursor: pointer; }
 
 .input-wrap.center { display: flex; justify-content: center; }
 
-/********************************************************
+/**
  * Contact Form 7
-********************************************************/
+**/
 .wpcf7 .screen-reader-response { border: 0 !important; clip: rect(1px, 1px, 1px, 1px) !important; -webkit-clip-path: inset(50%) !important; clip-path: inset(50%) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; white-space: nowrap !important; }
 
 html, body { background-color: #fff; }
@@ -169,7 +166,13 @@ body { min-height: 90vh; }
 
 .column-container .column { flex-grow: 1; flex-basis: 25%; }
 
-/******************************************************************
+.site-main .wrapper h1, .site-main .wrapper h2, .site-main .wrapper h3 { color: #291B4B; }
+
+.remove-space { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+
+.remove-space-up { margin-top: 0 !important; padding-top: 0 !important; }
+
+/**
  * All WordPress Login Parameters
  * 
  * Reset Password
@@ -186,7 +189,7 @@ body { min-height: 90vh; }
  * 
  * Logged Out
  * http://example.com/wp-login.php?loggedout=true
-******************************************************************/
+**/
 input[type="text"], input[type="password"], input[type="search"], input[type="email"], input[type="url"], input[type="tel"], input[type="number"], textarea { padding: 0.5em !important; font-size: 1.23em !important; min-height: auto !important; }
 
 a { color: #0000ee; }
@@ -221,44 +224,6 @@ body.login div#login form#loginform p input[type="submit"]:hover, body.login div
 
 body.login div#login p#nav a, body.login div#login p#backtoblog a, body.login div#login .privacy-policy-link { color: #fff; text-decoration: none; }
 
-/*
-.cta-button {
-	display: inline-block;
-    padding: 1em 1.5em;
-    margin-left: .5em;
-    transform: skew(-12deg);
-    text-shadow: none;
-    text-transform: uppercase;
-    font-weight: 700;
-	background-color: $color_purple;
-	color: $color_white!important;
-	box-shadow: 0px 0px 5px -1px #b7b7b7;
-
-	&:after {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: $color_pink;
-		transform: scale(0);
-		transition-property: transform;
-		transition-duration: 0.3s;
-		transition-timing-function: ease-out;
-	}
-	&:hover {
-		&:after {
-			transform: scale(1);
-		}
-	}
-	&.-white {
-		background-color: $color_white;
-		color: $color_black!important;
-	}
-}
-*/
 /** 
  * The interim login screen is displayed when you are working in the WordPress
  * Admin Area and for some reason the session expires and you are logged out.

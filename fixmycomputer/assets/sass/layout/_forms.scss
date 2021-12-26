@@ -1,6 +1,6 @@
-/********************************************************
+/**
  * Strip Browsers of Specific Form Styles
-********************************************************/
+**/
 ::-webkit-input-placeholder {
 	color: inherit;
 }
@@ -59,9 +59,9 @@ input[type=number] {
 }
 
 
-/********************************************************
+/**
  * Generic Form Styles
-********************************************************/
+**/
 input:focus, textarea:focus {
 	outline-width: 2px;
 	outline-style: solid;
@@ -150,9 +150,9 @@ label[for] {
 }
 
 
-/********************************************************
+/**
  * Contact Form 7
-********************************************************/
+**/
 .wpcf7 {
     .screen-reader-response {
         @include sr-only;

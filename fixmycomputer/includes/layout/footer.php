@@ -36,6 +36,7 @@ function the_site_footer(){
     $social_facebook = $right_column['facebook'];
     $g_review_link = $right_column['google_reviews_link'];
     $g_review_image = $right_column['google_reviews_image'];
+    $other_txt = get_field('other_text_foot', 'options');
 
     function mobile_menu_script(){ 
         global $email, $phone;
@@ -76,46 +77,73 @@ function the_site_footer(){
                 <?php } ?>
                 </table>
             <?php } ?>
+            <?php if($other_txt){ ?>
+                <div style="margin-top: 2.3em;">
+                    <p style="line-height: 1.2;">
+                    <?php echo $other_txt; ?>
+                    </p>
+                </div>
+            <?php } ?>
         </section>
         <section class="column" aria-label="Reach us and Our Address">
-            <strong>Reach Us</strong><br />
-            <a class="footer-link-size" href="tel:+1<?php echo $phone; ?>">
-                <i class="icon-phone"></i>
-                <span>Give us a Call</span>
-            </a>
-            <br />
-            <a class="footer-link-size" href="mailto:<?php echo $email; ?>">
-                <i class="icon-email"></i>
-                <span>Email Us</span>
-            </a>
-            <br /><br />
-            <address>
-                <strong>Our Address</strong><br />
-                <?php echo $address1; ?><br />
-                <?php echo $address2; ?><br />
-            </address>
-            <a class="footer-map" href="<?php echo $map_link; ?>" target="_blank" rel="noopener" title="Get Directions">
-                <i class="icon-map"></i>
-            </a>
+            <strong>Reach Us</strong>
+
+            <?php if($phone){ ?>
+                <br />
+                <a class="footer-link-size" href="tel:+1<?php echo $phone; ?>">
+                    <i class="icon-phone"></i>
+                    <span>Give us a Call</span>
+                </a>
+            <?php } ?>
+
+            <?php if($email){ ?>
+                <br />
+                <a class="footer-link-size" href="mailto:<?php echo $email; ?>">
+                    <i class="icon-email"></i>
+                    <span>Email Us</span>
+                </a>
+            <?php } ?>
+
+            <?php if($address1 || $address2){ ?>
+                <br /><br />
+                <address>
+                    <strong>Our Address</strong><br />
+                    <?php echo $address1; ?><br />
+                    <?php echo $address2; ?><br />
+                </address>
+            <?php } ?>
+
+            <?php if($map_link){ ?>
+                <a class="footer-map" href="<?php echo $map_link; ?>" target="_blank" rel="noopener" title="Get Directions">
+                    <i class="icon-map"></i>
+                </a>
+            <?php } ?>
+
+            <?php if($parking){ ?>
             <span class="where-parking tooltip" data-tooltip="<?php echo $parking; ?>">P</span>
+            <?php } ?>
         </section>
         <section class="column">
             <?php echo do_shortcode('[contact-form-7 id="262" title="Newsletter"]'); ?>
             
             <div class="column-container">
-                <div class="column">
-                    <a href="<?php echo $g_review_link; ?>" target="_blank" rel="noopener">
-                        <img src="<?php echo $g_review_image['url']; ?>" alt="<?php echo $g_review_image['alt']; ?>" width="<?php echo $g_review_image['width']; ?>" height="<?php echo $g_review_image['height']; ?>" loading="lazy" />
-                    </a>
-                </div>
-                <div class="column">
-                    <a class="social-link-foot" href="<?php echo $social_facebook; ?>" target="_blank" rel="noopener">
-                        <i class="icon-facebook"></i>
-                        <span class="sr-only">
-                            Like us on Facebook
-                        </span>
-                    </a>
-                </div>
+                <?php if($g_review_image['url']){ ?>
+                    <div class="column">
+                        <a href="<?php echo $g_review_link; ?>" target="_blank" rel="noopener">
+                            <img src="<?php echo $g_review_image['url']; ?>" alt="<?php echo $g_review_image['alt']; ?>" width="<?php echo $g_review_image['width']; ?>" height="<?php echo $g_review_image['height']; ?>" loading="lazy" />
+                        </a>
+                    </div>
+                <?php } ?>
+                <?php if($social_facebook){ ?>
+                    <div class="column">
+                        <a class="social-link-foot" href="<?php echo $social_facebook; ?>" target="_blank" rel="noopener">
+                            <i class="icon-facebook"></i>
+                            <span class="sr-only">
+                                Like us on Facebook
+                            </span>
+                        </a>
+                    </div>
+                <?php } ?>
             </div>
         </section>
     </div>

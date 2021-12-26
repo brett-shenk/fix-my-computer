@@ -1,6 +1,6 @@
 *, *:before, *:after { box-sizing: border-box; }
 
-/******************************************************** Originally    v2.0 | 20110126 http://meyerweb.com/eric/tools/css/reset/ Edited by: Brett */
+/** Originally    v2.0 | 20110126 http://meyerweb.com/eric/tools/css/reset/ Edited by: Brett */
 html, body, div, span, applet, object, p, a, abbr, acronym, address, big, cite, del, dfn, ins, q, s, small, strike, sub, sup, tt, var, u, center, dl, blockquote, fieldset, label, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, map, figure, figcaption, footer, header, hgroup, nav, output, ruby, section, summary, time, mark, audio, video, data { margin: 0; padding: 0; border: 0; font-size: 1em; font-family: inherit; vertical-align: baseline; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
@@ -45,42 +45,39 @@ summary::marker { content: ''; display: none; }
 
 address { font-style: normal; }
 
-/********************************************************
+/**
  * SIZES 
-********************************************************/
-/********************************************************
+**/
+/**
  * COLORS
-********************************************************/
-/********************************************************/
-/********************************************************/
-/********************************************************
+**/
+/**
+ * Files Paths
+**/
+/**
  * TYPOGRAPHY
- * 
- * .EOT is meant for IE browsers, like 8 and below
- * .TTF goes back to the 1980's
- * .WOFF2 & .WOFF are the recommended formats, in order
-********************************************************/
-/********************************************************
- * SOCIAL COLORS - http://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
-********************************************************/
-/********************************************************
+**/
+/**
+ * SOCIAL COLORS
+**/
+/**
  * Helpful Classes 
-********************************************************/
+**/
 .hidden { display: none !important; }
 
-/********************************************************
+/**
  * Screen Reader Text
-********************************************************/
+**/
 .sr-only, .screen-reader-text { border: 0 !important; clip: rect(1px, 1px, 1px, 1px) !important; -webkit-clip-path: inset(50%) !important; clip-path: inset(50%) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; white-space: nowrap !important; }
 
-/********************************************************
+/**
  * Dynamically Generate z-index based on name position
  * 
  * How to use:    map-get($z-layers, "z-index-menu");
-******************************************************/
-/********************************************************
+**/
+/**
  * Mixins
-********************************************************/
+**/
 .cta-button { display: inline-block; padding: 1em 1.5em; margin-left: .5em; border: none; transform: skew(-12deg); text-shadow: none; text-transform: uppercase; font-weight: 700; background-color: #3E267B; color: #fff !important; box-shadow: 0px 0px 5px -1px #b7b7b7; }
 
 .cta-button:after { content: ''; position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; background: #e31c79; transform: scale(0); transition-property: transform; transition-duration: 0.3s; transition-timing-function: ease-out; }
@@ -91,9 +88,9 @@ address { font-style: normal; }
 
 button.cta-button { border: 0; }
 
-/********************************************************
+/**
  * TYPOGRAPHY
-********************************************************/
+**/
 body { font-weight: 400; font-family: "Roboto", Helvetica, Arial, sans-serif; line-height: 1.2; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "Roboto", Helvetica, Arial, sans-serif; font-weight: 700; line-height: normal; margin: 0; }
@@ -150,11 +147,21 @@ body { min-height: 90vh; }
 
 .column-container .column { flex-grow: 1; flex-basis: 25%; }
 
-/********************************************************
+.site-main .wrapper h1, .site-main .wrapper h2, .site-main .wrapper h3 { color: #291B4B; }
+
+.remove-space { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+
+.remove-space-up { margin-top: 0 !important; padding-top: 0 !important; }
+
+/**
  * Editor Specific
-********************************************************/
+**/
 body.mce-content-body { padding: 1em !important; }
 
 body.mce-content-body iframe { width: 100%; }
+
+body.mce-content-body h1, body.mce-content-body h2, body.mce-content-body h3 { color: #291B4B; }
+
+body.mce-content-body ul, body.mce-content-body ol { line-height: 1.857; margin-top: 0; }
 
 /*# sourceMappingURL=custom-editor.min.css.map */

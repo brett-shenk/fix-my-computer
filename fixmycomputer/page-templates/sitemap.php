@@ -3,13 +3,10 @@
  * Template Name: Sitemap
 **/
 
-/**********************************************************
- *                      HOW TO USE
- * 1. Create ACF field with the name:  exclude_pages
- * 2. The type as relationship
- * 3. Return format:  Post ID
- **********************************************************/
+remove_action('entry_header', 'site_breadcrumbs', 15);
 
+
+add_action('after_entry', 'sitemap_main_content', 10);
 function sitemap_main_content(){
 
     // Get pages to be excluded
@@ -64,7 +61,6 @@ function sitemap_main_content(){
         </div>
     </section>
 <?php }
-add_action('after_entry', 'sitemap_main_content', 10);
 
 
 shenk_init();

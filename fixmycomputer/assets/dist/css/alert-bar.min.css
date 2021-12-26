@@ -1,39 +1,36 @@
-/********************************************************
+/**
  * SIZES 
-********************************************************/
-/********************************************************
+**/
+/**
  * COLORS
-********************************************************/
-/********************************************************/
-/********************************************************/
-/********************************************************
+**/
+/**
+ * Files Paths
+**/
+/**
  * TYPOGRAPHY
- * 
- * .EOT is meant for IE browsers, like 8 and below
- * .TTF goes back to the 1980's
- * .WOFF2 & .WOFF are the recommended formats, in order
-********************************************************/
-/********************************************************
- * SOCIAL COLORS - http://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
-********************************************************/
-/********************************************************
+**/
+/**
+ * SOCIAL COLORS
+**/
+/**
  * Helpful Classes 
-********************************************************/
+**/
 .hidden { display: none !important; }
 
-/********************************************************
+/**
  * Screen Reader Text
-********************************************************/
+**/
 .sr-only, .screen-reader-text { border: 0 !important; clip: rect(1px, 1px, 1px, 1px) !important; -webkit-clip-path: inset(50%) !important; clip-path: inset(50%) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; white-space: nowrap !important; }
 
-/********************************************************
+/**
  * Dynamically Generate z-index based on name position
  * 
  * How to use:    map-get($z-layers, "z-index-menu");
-******************************************************/
-/********************************************************
+**/
+/**
  * Mixins
-********************************************************/
+**/
 .alert-bar-container { background-color: #ffcc2f; color: #000; padding: 0.4em; width: 100%; z-index: 6; overflow: hidden; transition: all .25s ease; }
 
 .alert-bar-container .column { flex-grow: 0 !important; flex-basis: auto !important; }

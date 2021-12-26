@@ -1,14 +1,14 @@
-/********************************************************
+/**
  * Helpful Classes 
-********************************************************/
+**/
 .hidden {
 	display: none!important;
 }
 
 
-/********************************************************
+/**
  * Screen Reader Text
-********************************************************/
+**/
 @mixin sr-only {
 	border: 0 !important;
 	clip: rect(1px, 1px, 1px, 1px) !important;
@@ -30,11 +30,11 @@
 }
 
 
-/********************************************************
+/**
  * Dynamically Generate z-index based on name position
  * 
  * How to use:    map-get($z-layers, "z-index-menu");
-******************************************************/
+**/
 $z-layers-names: ("home-slider", "slider-arrows", "service-block", "preload", "menu", "admin-bar");
 $z-layers: ();
 
@@ -50,9 +50,9 @@ $i: 0;
 }
 
 
-/********************************************************
+/**
  * Mixins
-********************************************************/
+**/
 @mixin wrap {
 	margin: 0 auto;
 	width: 100%;

@@ -31,7 +31,7 @@
  * @property hook before_entry_header
  * @property hook entry_header
  * @property hook entry_header, do_entry_title, 10			Page Title
- * @property hook entry_header, do_site_breadcrumbs, 15		Breadcrumbs
+ * @property hook entry_header, site_breadcrumbs, 15		Breadcrumbs
  * @property hook after_entry_header
  * 
  * Site Footer

@@ -18,6 +18,9 @@
             background: linear-gradient( 270deg, rgba(255, 255, 255, 0) 0%, #3d1998 100%);
             background-size: cover;
         }
+        h1, h2, h3 {
+            color: $color_white;
+        }
         .wrapper {
             padding-left: 4.4em;
             padding-right: 4.4em;

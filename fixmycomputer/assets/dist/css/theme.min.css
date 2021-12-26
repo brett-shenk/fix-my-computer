@@ -1,7 +1,7 @@
 @charset "UTF-8";
 *, *:before, *:after { box-sizing: border-box; }
 
-/******************************************************** Originally    v2.0 | 20110126 http://meyerweb.com/eric/tools/css/reset/ Edited by: Brett */
+/** Originally    v2.0 | 20110126 http://meyerweb.com/eric/tools/css/reset/ Edited by: Brett */
 html, body, div, span, applet, object, p, a, abbr, acronym, address, big, cite, del, dfn, ins, q, s, small, strike, sub, sup, tt, var, u, center, dl, blockquote, fieldset, label, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, map, figure, figcaption, footer, header, hgroup, nav, output, ruby, section, summary, time, mark, audio, video, data { margin: 0; padding: 0; border: 0; font-size: 1em; font-family: inherit; vertical-align: baseline; }
 
 article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
@@ -46,59 +46,56 @@ summary::marker { content: ''; display: none; }
 
 address { font-style: normal; }
 
-/********************************************************
+/**
  * SIZES 
-********************************************************/
-/********************************************************
+**/
+/**
  * COLORS
-********************************************************/
-/********************************************************/
-/********************************************************/
-/********************************************************
+**/
+/**
+ * Files Paths
+**/
+/**
  * TYPOGRAPHY
- * 
- * .EOT is meant for IE browsers, like 8 and below
- * .TTF goes back to the 1980's
- * .WOFF2 & .WOFF are the recommended formats, in order
-********************************************************/
-/********************************************************
- * SOCIAL COLORS - http://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
-********************************************************/
-/********************************************************
+**/
+/**
+ * SOCIAL COLORS
+**/
+/**
  * Draw Line Animation
-********************************************************/
-/********************************************************
+**/
+/**
  * Zoom In Animation
-********************************************************/
+**/
 @-webkit-keyframes zoomIn { 0% { transform: translateY(-50%) scale(0); }
   100% { transform: translateY(-50%) scale(1); } }
 @keyframes zoomIn { 0% { transform: translateY(-50%) scale(0); }
   100% { transform: translateY(-50%) scale(1); } }
 
-/********************************************************
+/**
  * Helpful Classes 
-********************************************************/
+**/
 .hidden { display: none !important; }
 
-/********************************************************
+/**
  * Screen Reader Text
-********************************************************/
+**/
 .sr-only, .screen-reader-text { border: 0 !important; clip: rect(1px, 1px, 1px, 1px) !important; -webkit-clip-path: inset(50%) !important; clip-path: inset(50%) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; white-space: nowrap !important; }
 
-/********************************************************
+/**
  * Dynamically Generate z-index based on name position
  * 
  * How to use:    map-get($z-layers, "z-index-menu");
-******************************************************/
-/********************************************************
+**/
+/**
  * Mixins
-********************************************************/
-/******************************************************************
-* PREVIEW The SVG Here
-* https://icomoon.io/app/#/select
-* 
-* GENERATED FILE
-******************************************************************/
+**/
+/**
+ * PREVIEW The SVG Here
+ * https://icomoon.io/app/#/select
+ * 
+ * GENERATED FILE
+**/
 @font-face { font-family: 'shenks-icons'; font-display: block; src: url("../svgs/shenks-icons.woff2") format("woff2"), url("../svgs/shenks-icons.woff") format("woff"), url("../svgs/shenks-icons.ttf") format("truetype"), url("../svgs/shenks-icons.svg#shenks-icons") format("svg"); }
 
 .icon-chevron-left:before, .icon-chevron-right:before, .icon-close:before, .icon-done:before, .icon-email:before, .icon-facebook:before, .icon-home1:before, .icon-map:before, .icon-mode-dark:before, .icon-mode-light:before, .icon-phone:before, .checkbox-wrap:before, .slick-prev:before, [dir='rtl'] .slick-next:before, .slick-next:before, [dir='rtl'] .slick-prev:before { font-family: "shenks-icons"; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; font-style: normal; font-weight: normal; text-decoration: none; display: inline-block; line-height: inherit; vertical-align: bottom; transition: all 0.25s ease-out; }
@@ -125,18 +122,23 @@ address { font-style: normal; }
 
 .icon-phone:before { content: ""; }
 
-/******************************************************************
-* Custom Icons
-
-* WARNING: Edit  icons-template.scss
-* TIP: [class*='icon-'] to target any icon
-******************************************************************/
+/**
+ * Custom Icons
+ * 
+ * WARNING: Edit  icons-template.scss
+ * TIP: [class*='icon-'] to target any icon
+**/
 .checkbox-wrap:before { content: ""; }
 
 .slick-prev:before, [dir='rtl'] .slick-next:before { content: ""; }
 
 .slick-next:before, [dir='rtl'] .slick-prev:before { content: ""; }
 
+/**
+ * Slick Slider
+ * v1.8.1
+ * https://kenwheeler.github.io/slick/
+**/
 /* Slider */
 .slick-initialized { position: relative; line-height: 0; }
 
@@ -220,11 +222,11 @@ address { font-style: normal; }
 
 .site-header { position: fixed; top: 0; z-index: 5; width: 100%; background-color: #000; box-shadow: -2px 4px 10px 0px #141414; transition: all .25s ease; }
 
+.site-header > .wrapper { height: 131px; }
+
 .site-header .wrapper { display: flex; }
 
 @media (max-width: 1300px) { .site-header .wrapper { justify-content: space-between; } }
-
-@media (max-width: 48.875em) { .site-header .wrapper { min-height: 131px; } }
 
 .site-header .wrapper > a { flex-grow: 0; }
 
@@ -397,9 +399,9 @@ body.admin-bar .site-header { top: 2em; }
 
 .tooltip:hover:after { opacity: 1; visibility: visible; }
 
-/********************************************************
+/**
  * Strip Browsers of Specific Form Styles
-********************************************************/
+**/
 
 :focus::-moz-placeholder { color: transparent; }
 
@@ -425,9 +427,9 @@ input[type="search"]::-webkit-search-decoration, input[type="search"]::-webkit-s
 
 input[type=number] { -moz-appearance: textfield; }
 
-/********************************************************
+/**
  * Generic Form Styles
-********************************************************/
+**/
 input:focus, textarea:focus { outline-width: 2px; outline-style: solid; outline-color: Highlight; }
 
 input[type="text"], input[type="password"], input[type="search"], input[type="email"], input[type="url"], input[type="tel"], input[type="number"], input[type="date"], input[type="month"], input[type="week"], input[type="time"], textarea, select { width: 100%; max-width: 100%; padding: 0.5em; border: 1px solid #BBB; border-radius: 0; font-size: 1em; font-family: Arial, sans-serif; }
@@ -456,14 +458,14 @@ label[for] { cursor: pointer; }
 
 .input-wrap.center { display: flex; justify-content: center; }
 
-/********************************************************
+/**
  * Contact Form 7
-********************************************************/
+**/
 .wpcf7 .screen-reader-response { border: 0 !important; clip: rect(1px, 1px, 1px, 1px) !important; -webkit-clip-path: inset(50%) !important; clip-path: inset(50%) !important; height: 1px !important; margin: -1px !important; overflow: hidden !important; padding: 0 !important; position: absolute !important; width: 1px !important; white-space: nowrap !important; }
 
-/********************************************************
+/**
  * TYPOGRAPHY
-********************************************************/
+**/
 body { font-weight: 400; font-family: "Roboto", Helvetica, Arial, sans-serif; line-height: 1.2; -webkit-font-smoothing: antialiased; -webkit-text-size-adjust: 100%; }
 
 h1, h2, h3, h4, h5, h6 { font-family: "Roboto", Helvetica, Arial, sans-serif; font-weight: 700; line-height: normal; margin: 0; }
@@ -554,11 +556,19 @@ body { min-height: 90vh; }
 
 .column-container .column { flex-grow: 1; flex-basis: 25%; }
 
+.site-main .wrapper h1, .site-main .wrapper h2, .site-main .wrapper h3 { color: #291B4B; }
+
+.remove-space { margin-bottom: 0 !important; padding-bottom: 0 !important; }
+
+.remove-space-up { margin-top: 0 !important; padding-top: 0 !important; }
+
 .module-home-page-slider { margin-bottom: 2em; }
 
 .module-home-page-slider .slick-slide { position: relative; overflow: hidden; min-height: 350px; }
 
 .module-home-page-slider .slick-slide:after { content: ""; width: 100%; height: 100%; position: absolute; top: 0; left: -30%; z-index: 1; background: #3d1998; background: linear-gradient(270deg, rgba(255, 255, 255, 0) 0%, #3d1998 100%); background-size: cover; }
+
+.module-home-page-slider .slick-slide h1, .module-home-page-slider .slick-slide h2, .module-home-page-slider .slick-slide h3 { color: #fff; }
 
 .module-home-page-slider .slick-slide .wrapper { padding-left: 4.4em; padding-right: 4.4em; }
 
@@ -587,8 +597,6 @@ body { min-height: 90vh; }
 .module-full-width-content, .module-two-column { padding-top: 2em; padding-bottom: 2em; }
 
 .module-full-width-content .wrapper, .module-two-column .wrapper { max-width: 92.7em; }
-
-.module-full-width-content h1, .module-full-width-content h2, .module-full-width-content h3, .module-two-column h1, .module-two-column h2, .module-two-column h3 { color: #291B4B; }
 
 .module-two-column .column:first-of-type { margin-right: 2.5em; }
 
@@ -654,9 +662,9 @@ body { min-height: 90vh; }
 
 .module-service-text .column-container a:not([class]):hover { color: #e31c79; }
 
-/*******************
-* Contact
-*******************/
+/**
+ * Contact
+**/
 .cta-button.-form { padding: 0; }
 
 .cta-button.-form input { border: 0; background: transparent; padding: 1em 1.5em; font-size: 1em; color: #fff; font-weight: 700; text-transform: uppercase; }
@@ -677,12 +685,14 @@ body { min-height: 90vh; }
 
 .wpcf7-not-valid-tip { color: #DB2525; font-size: .9em; font-style: italic; }
 
-/*******************
-* Sitemap
-*******************/
+/**
+ * Sitemap
+**/
 .sitemap-module { margin-top: 3em; display: flex; justify-content: space-evenly; }
 
 .sitemap-module .column { max-width: 240px; width: 100%; }
+
+.sitemap-module .column ul ul, .sitemap-module .column ul ul ul, .sitemap-module .column ol ol, .sitemap-module .column ol ol ol { padding-top: 0.3em; }
 
 .sitemap-module .column ul { padding-left: 1.4em; }
 
@@ -696,9 +706,125 @@ body { min-height: 90vh; }
 
 .sitemap-module .column a:hover:before { border-bottom-color: #e31c79; width: 100%; }
 
-body.privacy-policy article.entry > section > .wrapper { max-width: 81.3em; }
+/**
+ * 404 Error Page
+**/
+/**
+ * Glitch Animation thanks to:
+ * Alex Nozdriukhin
+ * https://codepen.io/alexnoz/pen/PmvMZm
+**/
+:root { --f-size: 15; --f-unit: 1vmin; --f: calc(var(--f-size) * var(--f-unit)); --bg: #ffffff; }
 
-body.privacy-policy article.entry > section h3 { font-size: 1.4em; }
+.error404 .entry-title { margin: 1em 0.5em 0.3em 0.5em !important; }
+
+.error404 .entry-header { position: absolute; top: 0; left: 0; right: 0; }
+
+.error404 #footer { margin-top: 0; }
+
+.error404 .banner-container h1 { flex: 1; line-height: 0.75; margin: auto; color: #1af0dc; text-align: center; transform: scaleX(var(--scale, 1)); -webkit-animation: glitch-p 11s infinite alternate; animation: glitch-p 11s infinite alternate; }
+
+.error404 .banner-container h1:before, .error404 .banner-container h1:after { --top: 0; --left: 0; --v-height: 30%; --n-tenth: calc(var(--f-size) * .1 * var(--top)); --t-cut: calc(var(--n-tenth) / var(--f-size) * 100%); --b-cut: calc(var(--t-cut) + var(--v-height)); content: attr(data-text); position: absolute; width: 100%; left: 0; text-align: center; transform: translateX(calc(var(--left) * 100%)); filter: drop-shadow(0 0 transparent); text-shadow: calc(var(--left) * -3em) 0 0.02em lime, calc(var(--left) * -6em) 0 0.02em #ff00e1; background-color: var(--bg); -webkit-clip-path: polygon(0% var(--t-cut), 100% var(--t-cut), 100% var(--b-cut), 0% var(--b-cut)); clip-path: polygon(0% var(--t-cut), 100% var(--t-cut), 100% var(--b-cut), 0% var(--b-cut)); }
+
+.error404 .banner-container h1:before { animation: glitch-b 1.7s infinite alternate-reverse; }
+
+.error404 .banner-container h1:after { -webkit-animation: glitch-a 3.1s infinite alternate; animation: glitch-a 3.1s infinite alternate; }
+
+.error-404-container { text-align: center; max-width: 45em; }
+
+.error-background { margin: 4em auto 0 auto; }
+
+@-webkit-keyframes glitch-p { 17% { --scale: .87; }
+  31% { --scale: 1.1; }
+  37% { --scale: 1.3; }
+  47% { --scale: .91; }
+  87% { --scale: 1; } }
+
+@keyframes glitch-p { 17% { --scale: .87; }
+  31% { --scale: 1.1; }
+  37% { --scale: 1.3; }
+  47% { --scale: .91; }
+  87% { --scale: 1; } }
+
+@-webkit-keyframes glitch-a { 10%, 30%, 50%, 70%, 90% { --top: 0;
+    --left: 0; }
+  0% { --v-height: 15%; }
+  20% { --left: .005; }
+  40% { --left: .01;
+    --v-height: 20%;
+    --top: 3; }
+  60% { --left: .03;
+    --v-height: 25%;
+    --top: 6; }
+  80% { --left: .07;
+    --v-height: 5%;
+    --top: 8; }
+  100% { --left: .083;
+    --v-height: 30%;
+    --top: 1; } }
+
+@keyframes glitch-a { 10%, 30%, 50%, 70%, 90% { --top: 0;
+    --left: 0; }
+  0% { --v-height: 15%; }
+  20% { --left: .005; }
+  40% { --left: .01;
+    --v-height: 20%;
+    --top: 3; }
+  60% { --left: .03;
+    --v-height: 25%;
+    --top: 6; }
+  80% { --left: .07;
+    --v-height: 5%;
+    --top: 8; }
+  100% { --left: .083;
+    --v-height: 30%;
+    --top: 1; } }
+
+@-webkit-keyframes glitch-b { 10%, 30%, 50%, 70%, 90% { --top: 0;
+    --left: 0; }
+  0% { --v-height: 15%;
+    --top: 10; }
+  20% { --left: -.005; }
+  40% { --left: -.01;
+    --v-height: 17%;
+    --top: 3; }
+  60% { --left: -.03;
+    --v-height: 35%;
+    --top: 6; }
+  80% { --left: -.07;
+    --v-height: 5%;
+    --top: 8; }
+  100% { --left: -.083;
+    --v-height: 30%;
+    --top: 1; } }
+
+@keyframes glitch-b { 10%, 30%, 50%, 70%, 90% { --top: 0;
+    --left: 0; }
+  0% { --v-height: 15%;
+    --top: 10; }
+  20% { --left: -.005; }
+  40% { --left: -.01;
+    --v-height: 17%;
+    --top: 3; }
+  60% { --left: -.03;
+    --v-height: 35%;
+    --top: 6; }
+  80% { --left: -.07;
+    --v-height: 5%;
+    --top: 8; }
+  100% { --left: -.083;
+    --v-height: 30%;
+    --top: 1; } }
+
+body.page-template-slim-layout .site-main section > .wrapper, body.privacy-policy.page-template .site-main section > .wrapper { max-width: 81.3em; }
+
+body.page-template-slim-layout .site-main section .wrapper h2, body.privacy-policy.page-template .site-main section .wrapper h2 { font-size: 2em; padding-top: 1em; }
+
+body.page-template-slim-layout .site-main section .wrapper h3, body.privacy-policy.page-template .site-main section .wrapper h3 { font-size: 1.4em; }
+
+body.page-template-slim-layout .site-main section .wrapper ul, body.page-template-slim-layout .site-main section .wrapper ol, body.privacy-policy.page-template .site-main section .wrapper ul, body.privacy-policy.page-template .site-main section .wrapper ol { line-height: 1.857; margin-top: 0; }
+
+body.page-template-slim-layout .site-main section .wrapper td, body.privacy-policy.page-template .site-main section .wrapper td { border: 1px solid black; padding: 1em; }
 
 @media print { * { background: transparent !important; color: black !important; text-shadow: none !important; filter: none !important; }
   a:link, a:visited { color: black !important; text-decoration: underline; }

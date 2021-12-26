@@ -24,10 +24,17 @@ add_filter( 'tiny_mce_before_init', 'shenk_mce_before_init' );
 function shenk_mce_before_init( $settings ) {
 	$style_formats = array(
 		array(
-			'title' => 'No Break',
+			'title' => 'No Space Below',
 			'inline' => 'span',
 			'classes' => array(
-				'no-br'
+				'remove-space'
+			)
+		),
+		array(
+			'title' => 'No Space Above',
+			'inline' => 'span',
+			'classes' => array(
+				'remove-space-up'
 			)
 		),
 		array(

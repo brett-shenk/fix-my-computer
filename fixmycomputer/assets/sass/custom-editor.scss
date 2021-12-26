@@ -16,13 +16,20 @@
 @import "modules/content";
 
 
-/********************************************************
+/**
  * Editor Specific
-********************************************************/
+**/
 body.mce-content-body {
 	padding: 1em!important;
 
 	iframe {
 		width: 100%;
+	}
+	h1, h2, h3 {
+        color: $color_dark_purple;
+    }
+	ul, ol {
+		line-height: 1.857;
+		margin-top: 0;
 	}
 }

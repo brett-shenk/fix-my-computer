@@ -1,85 +1,243 @@
-/*******************
-* Contact
-*******************/
+/**
+ * Contact
+**/
 .cta-button.-form{
-    padding: 0;
-    
-    input {
-        border: 0;
-        background: transparent;
-        padding: 1em 1.5em;
-        font-size: 1em;
-        color: $color_white;
-        font-weight: 700;
-        text-transform: uppercase;
-    }
+	padding: 0;
+	
+	input {
+		border: 0;
+		background: transparent;
+		padding: 1em 1.5em;
+		font-size: 1em;
+		color: $color_white;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
 }
 .site-main .wpcf7 {
-    form {
-        padding-top: 3.7em;
-    }
-    input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
-        padding: 0.8em;
-    }
-    .input-wrap {
-        position: relative;
-        margin-bottom: 1.5em;
-    }
-    label {
-        background-color: white;
-        display: inline-block;
-        padding: 0 0.4em;
-        pointer-events: none;
-        position: absolute;
-        top: 0.7em;
-        left: 0.6em;
-        font-size: 1.1em;
-        font-weight: 500;
-        transition: .25s all ease;
+	form {
+		padding-top: 3.7em;
+	}
+	input[type="text"], input[type="email"], input[type="tel"], input[type="number"], textarea {
+		padding: 0.8em;
+	}
+	.input-wrap {
+		position: relative;
+		margin-bottom: 1.5em;
+	}
+	label {
+		background-color: white;
+		display: inline-block;
+		padding: 0 0.4em;
+		pointer-events: none;
+		position: absolute;
+		top: 0.7em;
+		left: 0.6em;
+		font-size: 1.1em;
+		font-weight: 500;
+		transition: .25s all ease;
 
-        em {
-            color: $color_error;
-        }
-    }
-    .wpcf7-response-output {
-        color: $color_error;
-        background-color: #cfcfcf;
-        box-shadow: 2px 4px 9px -4px black;
-        margin-top: 1.5em;
-        
-        &:not(:empty){
-            padding: 1.1em;
-        }
-    }
+		em {
+			color: $color_error;
+		}
+	}
+	.wpcf7-response-output {
+		color: $color_error;
+		background-color: #cfcfcf;
+		box-shadow: 2px 4px 9px -4px black;
+		margin-top: 1.5em;
+		
+		&:not(:empty){
+			padding: 1.1em;
+		}
+	}
 }
 .wpcf7-not-valid-tip {
-    color: $color_error;
-    font-size: .9em;
-    font-style: italic;
+	color: $color_error;
+	font-size: .9em;
+	font-style: italic;
 }
 
 
-/*******************
-* Sitemap
-*******************/
+/**
+ * Sitemap
+**/
 .sitemap-module {
-    margin-top: 3em;
-    display: flex;
-    justify-content: space-evenly;
+	margin-top: 3em;
+	display: flex;
+	justify-content: space-evenly;
 
-    .column {
-        max-width: 240px;
-        width: 100%;
+	.column {
+		max-width: 240px;
+		width: 100%;
 
-        ul {
-            padding-left: 1.4em;
-        }
-        li {
-            margin-bottom: 0.4em;
-        }
-        a {
-            line-height: 1.4em;
-            @include link_draw_line();
-        }
-    }
+		ul ul, ul ul ul,
+		ol ol, ol ol ol {
+			padding-top: 0.3em;
+		}
+		ul {
+			padding-left: 1.4em;
+		}
+		li {
+			margin-bottom: 0.4em;
+		}
+		a {
+			line-height: 1.4em;
+			@include link_draw_line();
+		}
+	}
+}
+
+/**
+ * 404 Error Page
+**/
+/**
+ * Glitch Animation thanks to:
+ * Alex Nozdriukhin
+ * https://codepen.io/alexnoz/pen/PmvMZm
+**/
+:root {
+	--f-size: 15;
+	--f-unit: 1vmin;
+	--f: calc(var(--f-size) * var(--f-unit));
+	--bg: #ffffff;
+}
+.error404 {
+	.entry-title {
+		margin: 1em 0.5em 0.3em 0.5em!important;
+	}
+	.entry-header {
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+	}
+	#footer {
+		margin-top: 0;
+	}
+	.banner-container {
+		h1 {
+			flex: 1;
+			line-height: 0.75;
+			margin: auto;
+			color: #1af0dc;
+			text-align: center;
+			transform: scaleX(var(--scale, 1));
+			animation: glitch-p 11s infinite alternate;
+		}
+		h1:before, h1:after {
+			--top: 0;
+			--left: 0;
+			--v-height: 30%;
+			--n-tenth: calc(var(--f-size) * .1 * var(--top));
+			--t-cut: calc(var(--n-tenth) / var(--f-size) * 100%);
+			--b-cut: calc(var(--t-cut) + var(--v-height));
+			content: attr(data-text);
+			position: absolute;
+			width: 100%;
+			left: 0;
+			text-align: center;
+			transform: translateX(calc(var(--left) * 100%));
+			filter: drop-shadow(0 0 transparent);
+			text-shadow: calc(var(--left) * -3em) 0 0.02em lime, calc(var(--left) * -6em) 0 0.02em #ff00e1;
+			background-color: var(--bg);
+			clip-path: polygon(0% var(--t-cut), 100% var(--t-cut), 100% var(--b-cut), 0% var(--b-cut));
+		}
+		h1:before {
+			animation: glitch-b 1.7s infinite alternate-reverse;
+		}
+		h1:after {
+			animation: glitch-a 3.1s infinite alternate;
+		}
+	}
+
+}
+.error-404-container {
+	text-align: center;
+	max-width: 45em;
+}
+.error-background {
+	margin: 4em auto 0 auto;
+}
+@keyframes glitch-p {
+  	17% {
+		--scale: .87;
+  	}
+  	31% {
+		--scale: 1.1;
+  	}
+  	37% {
+		--scale: 1.3;
+  	}
+  	47% {
+		--scale: .91;
+  	}
+  	87% {
+		--scale: 1;
+  	}
+}
+@keyframes glitch-a {
+  	10%, 30%, 50%, 70%, 90% {
+		--top: 0;
+		--left: 0;
+  	}
+  	0% {
+		--v-height: 15%;
+  	}
+  	20% {
+		--left: .005;
+  	}
+  	40% {
+		--left: .01;
+		--v-height: 20%;
+		--top: 3;
+  	}
+  	60% {
+		--left: .03;
+		--v-height: 25%;
+		--top: 6;
+  	}
+  	80% {
+		--left: .07;
+		--v-height: 5%;
+		--top: 8;
+  	}
+  	100% {
+		--left: .083;
+		--v-height: 30%;
+		--top: 1;
+  	}
+}
+@keyframes glitch-b {
+  	10%, 30%, 50%, 70%, 90% {
+		--top: 0;
+		--left: 0;
+  	}
+  	0% {
+		--v-height: 15%;
+		--top: 10;
+  	}
+  	20% {
+		--left: -.005;
+  	}
+  	40% {
+		--left: -.01;
+		--v-height: 17%;
+		--top: 3;
+  	}
+  	60% {
+		--left: -.03;
+		--v-height: 35%;
+		--top: 6;
+  	}
+  	80% {
+		--left: -.07;
+		--v-height: 5%;
+		--top: 8;
+  	}
+  	100% {
+		--left: -.083;
+		--v-height: 30%;
+		--top: 1;
+  	}
 }

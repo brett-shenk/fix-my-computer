@@ -1,22 +1,19 @@
-/********************************************************
+/**
  * SIZES 
-********************************************************/
-/********************************************************
+**/
+/**
  * COLORS
-********************************************************/
-/********************************************************/
-/********************************************************/
-/********************************************************
+**/
+/**
+ * Files Paths
+**/
+/**
  * TYPOGRAPHY
- * 
- * .EOT is meant for IE browsers, like 8 and below
- * .TTF goes back to the 1980's
- * .WOFF2 & .WOFF are the recommended formats, in order
-********************************************************/
-/********************************************************
- * SOCIAL COLORS - http://designpieces.com/2012/12/social-media-colours-hex-and-rgb/
-********************************************************/
-/******************************************************** Admin Styles */
+**/
+/**
+ * SOCIAL COLORS
+**/
+/** Admin Styles */
 .meta-box-sortables #slugdiv, #screen-options-wrap label[for="slugdiv-hide"] { display: none; }
 
 .acf-field.acf-field-message ul { list-style-type: disc; }
@@ -36,7 +33,5 @@
 .acf-field.acf-field-group.seamless > .acf-input { padding: 0 !important; }
 
 .acf-fields .acf-field.noLabel > .acf-label { display: none; }
-
-/******************************************************** Custom Admin Styles */
 
 /*# sourceMappingURL=admin.min.css.map */

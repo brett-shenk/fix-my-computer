@@ -18,7 +18,7 @@
 // Module Styles
 @import "modules/content";
 
-/******************************************************************
+/**
  * All WordPress Login Parameters
  * 
  * Reset Password
@@ -35,7 +35,7 @@
  * 
  * Logged Out
  * http://example.com/wp-login.php?loggedout=true
-******************************************************************/
+**/
 input[type="text"], 
 input[type="password"], 
 input[type="search"], 
@@ -137,47 +137,6 @@ body.login{
 		}
 	}
 }
-
-
-/*
-.cta-button {
-	display: inline-block;
-    padding: 1em 1.5em;
-    margin-left: .5em;
-    transform: skew(-12deg);
-    text-shadow: none;
-    text-transform: uppercase;
-    font-weight: 700;
-	background-color: $color_purple;
-	color: $color_white!important;
-	box-shadow: 0px 0px 5px -1px #b7b7b7;
-
-	&:after {
-		content: '';
-		position: absolute;
-		z-index: -1;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background: $color_pink;
-		transform: scale(0);
-		transition-property: transform;
-		transition-duration: 0.3s;
-		transition-timing-function: ease-out;
-	}
-	&:hover {
-		&:after {
-			transform: scale(1);
-		}
-	}
-	&.-white {
-		background-color: $color_white;
-		color: $color_black!important;
-	}
-}
-*/
-
 
 /** 
  * The interim login screen is displayed when you are working in the WordPress
