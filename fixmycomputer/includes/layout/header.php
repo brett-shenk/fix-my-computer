@@ -155,7 +155,7 @@ function default_page_header_open(){
 			$banner_image = get_field('banner_image');
 
 			if( $banner_image ) {
-				echo wp_get_attachment_image( $banner_image['id'], array('1920', '400'), false, 
+				echo wp_get_attachment_image( $banner_image['id'], array('1920', '999'), false, 
 				array( 'alt' => $banner_image['alt'], "class" => '' ));
 			} else {
 				?>

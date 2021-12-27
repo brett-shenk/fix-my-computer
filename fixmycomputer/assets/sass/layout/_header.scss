@@ -72,6 +72,8 @@ body {
     &[data-layout-type="banner"]{
         position: relative;
         background-color: $color_black;
+        max-height: 400px;
+        overflow: hidden;
 
         &:before {
             @include pseudo-element;

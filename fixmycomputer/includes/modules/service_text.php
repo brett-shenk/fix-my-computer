@@ -18,22 +18,34 @@
                     $content = get_sub_field('content');
                     ?>
                     <div class="column">
-                        <h2>
-                        <a href="<?php echo $cta['url']; ?>" 
-                            target="<?php echo $cta['target']; ?>" 
-                            <?php if( $cta['target'] == "_blank" ){ echo 'rel="noopener"'; } ?> 
-                            >
-                            <?php echo $header; ?>
-                            </a>
-                        </h2>
+                        <?php if( $header ){ ?>
+                            <h2>
+                                <?php if( $cta['url'] ){ ?>
+                                    <a href="<?php echo $cta['url']; ?>" 
+                                    target="<?php echo $cta['target']; ?>" 
+                                    <?php if( $cta['target'] == "_blank" ){ echo 'rel="noopener"'; } ?> 
+                                    >
+                                <?php }
+
+                                echo $header;
+
+                                if( $cta['url'] ){ ?>
+                                    </a>
+                                <?php } ?>
+                            </h2>
+                        <?php } ?>
+
                         <p><?php echo $content; ?></p>
-                        <a href="<?php echo $cta['url']; ?>"
-                            target="<?php echo $cta['target']; ?>" 
-                            class="cta-button" 
-                            <?php if( $cta['target'] == "_blank" ){ echo 'rel="noopener"'; } ?> 
-                            >
-                            <?php echo $cta['title']; ?>
-                        </a>
+
+                        <?php if( $cta['url'] ){ ?>
+                            <a href="<?php echo $cta['url']; ?>"
+                                target="<?php echo $cta['target']; ?>" 
+                                class="cta-button" 
+                                <?php if( $cta['target'] == "_blank" ){ echo 'rel="noopener"'; } ?> 
+                                >
+                                <?php echo $cta['title']; ?>
+                            </a>
+                        <?php } ?>
                     </div>
                 <?php }
             } ?>

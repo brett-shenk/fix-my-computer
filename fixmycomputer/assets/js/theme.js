@@ -52,6 +52,9 @@ window.addEventListener('scroll', checkScroll);
 **/
 document.addEventListener('DOMContentLoaded', function(event){ 
 
+	// Remove the default class if JS is enabled
+	document.querySelector('html').classList.remove('no-js');
+
 	if( $('.home-slider').length ){
 		$('.home-slider').slick({
 			accessibility: false,

@@ -152,6 +152,9 @@ function the_site_footer(){
 function the_site_copyright(){
     $text = get_field('copyright_text', 'options');
     $the_links = get_field('footer_links', 'options');
+    if($text){
+        $text = 'Fix My Computer';
+    }
     ?>
     <section class="site-copyright" aria-label="Site Copyright">
         <div class="column-container wrapper">

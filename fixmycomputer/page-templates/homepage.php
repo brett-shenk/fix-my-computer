@@ -5,6 +5,7 @@
 
 remove_action( 'entry', 'do_entry_header', 1);
 
+
 add_action('entry', 'home_page_slider', 2);
 function home_page_slider(){
     if(have_rows('hp_slider')){ ?>
@@ -32,13 +33,15 @@ function home_page_slider(){
                             <div class="slide-content">
                                 <?php echo $content; ?>
         
-                                <a href="<?php echo $link['url']; ?>"
-                                class="cta-button -white"
-                                target="<?php echo $link['target']; ?>"
-                                <?php if( $link['target'] == "_blank" ){ echo 'rel="noopener"'; } ?>
-                                >
-                                    <?php echo $link['title']; ?>
-                                </a>
+                                <?php if($link){ ?>
+                                    <a href="<?php echo $link['url']; ?>"
+                                    class="cta-button -white"
+                                    target="<?php echo $link['target']; ?>"
+                                    <?php if( $link['target'] == "_blank" ){ echo 'rel="noopener"'; } ?>
+                                    >
+                                        <?php echo $link['title']; ?>
+                                    </a>
+                                <?php } ?>
                             </div>
                         </div>
                     </div>
@@ -51,5 +54,6 @@ function home_page_slider(){
         </section>
     <?php }
 }
+
 
 shenk_init();

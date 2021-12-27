@@ -18,19 +18,24 @@
                         } else { ?>
                             <img src="https://dummyimage.com/450x450/adadad.jpg&text=+" alt="" width="450" height="450" loading="lazy" crossorigin="anonymous" />
                         <?php } ?>
-                        <h3><?php echo $header; ?></h3>
+
+                        <?php if( $header ){ ?>
+                            <h3><?php echo $header; ?></h3>
+                        <?php } ?>
                     </div>
                     <div class="second-part">
                         <div>
                             <?php echo $content; ?>
                         </div>
-                        <a href="<?php echo $cta['url']; ?>"
-                        target="<?php echo $cta['target']; ?>" 
-                        class="cta-button -white" 
-                        <?php if( $cta['target'] == "_blank" ){ echo 'rel="noopener"'; } ?> 
-                        >
-                            <?php echo $cta['title']; ?>
-                        </a>
+                        <?php if( $cta['url'] ){ ?>
+                            <a href="<?php echo $cta['url']; ?>"
+                            target="<?php echo $cta['target']; ?>" 
+                            class="cta-button -white" 
+                            <?php if( $cta['target'] == "_blank" ){ echo 'rel="noopener"'; } ?> 
+                            >
+                                <?php echo $cta['title']; ?>
+                            </a>
+                        <?php } ?>
                     </div>
                 </div>
             <?php } ?>

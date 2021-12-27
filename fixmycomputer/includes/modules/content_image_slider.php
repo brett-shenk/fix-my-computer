@@ -25,7 +25,7 @@
                             
                             ?>
                             <div>
-                                <?php echo wp_get_attachment_image( $image['id'], array('800', '550'), false, 
+                                <?php echo wp_get_attachment_image( $image['id'], 'page-slider', false, 
                                 array( 'alt' => $image['alt'] ));
                                 if($image['caption']){ ?>
                                     <div class="the-caption">

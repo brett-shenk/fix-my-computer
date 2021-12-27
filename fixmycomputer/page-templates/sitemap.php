@@ -8,7 +8,6 @@ remove_action('entry_header', 'site_breadcrumbs', 15);
 
 add_action('after_entry', 'sitemap_main_content', 10);
 function sitemap_main_content(){
-
     // Get pages to be excluded
     $exclude_pages = get_field('exclude_pages');
     $excluded_string = '';

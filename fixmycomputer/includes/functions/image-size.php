@@ -39,6 +39,7 @@ add_filter('big_image_size_threshold', '__return_false');
 **/
 add_image_size( 'page-banner', 1900, 600, true );
 add_image_size( 'service-block', 450, 450, true );
+add_image_size( 'page-slider', 850, 500, true );
 
 
 // Register image sizes proper names
@@ -47,5 +48,6 @@ function shenk_custom_sizes( $sizes ) {
     return array_merge( $sizes, array(
         'page-banner'       => __( 'Page Banner' ),
         'service-block'     => __( 'Service Block' ),
+        'page-slider'       => __( 'Page Slider' ),
     ) );
 }

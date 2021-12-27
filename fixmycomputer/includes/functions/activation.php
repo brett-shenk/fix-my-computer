@@ -6,7 +6,7 @@
  * Update the admin footer + admin greeting
 **/
 
-add_filter('admin_footer_text', 'shenk_admin_footer');
+add_filter('admin_footer_text', 'shenk_admin_footer', 999);
 function shenk_admin_footer() {
 	$output = '';
 	$output .= 'Powered by: <a href="https://wordpress.org/" target="_blank">WordPress</a>. ';
