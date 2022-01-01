@@ -232,13 +232,26 @@ add_filter( 'media_view_strings', function ($strings){
 // Hide input fields when uploading or editing media
 add_action('admin_print_scripts', function(){ ?>
     <style>
-	/* .attachment-details .setting[data-setting="caption"],       <?php // Media caption ?> */
-	.attachment-details .setting[data-setting="description"],   <?php // Media description ?>
-	.attachment-details .setting[data-setting="artist"],        <?php // Audio artist ?>
-	.attachment-details .setting[data-setting="album"],         <?php // Audio album ?>
+	/* .attachment-details .setting[data-setting="caption"],       	<?php // Media caption ?> */
+	.attachment-details .setting[data-setting="description"],		<?php // Media description ?>
+	.attachment-details .setting[data-setting="artist"],    		<?php // Audio artist ?>
+	.attachment-details .setting[data-setting="album"],         	<?php // Audio album ?>
     .media-types-required-info
 	{
 		display: none;
+	}
+	.attachments-browser .compat-field-enable-media-replace .help	<?php // Media Replacer ?>
+	{
+		visibility: hidden;
+    	margin: 0;
+	}
+	.attachments-browser .compat-attachment-fields tr td:not([class]):first-of-type 	<?php // Rank Math  ?>
+	{
+		min-width: 30%;
+		margin-right: 4%;
+		float: left;
+		text-align: right;
+		padding: 1.3em 0;
 	}
 	</style>
 <?php 

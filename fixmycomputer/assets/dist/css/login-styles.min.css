@@ -78,7 +78,7 @@ small { font-size: .8em; }
 
 a, sup, sub, del, li, td, th, summary { font-family: "Roboto", Helvetica, Arial, sans-serif; }
 
-.cta-button { display: inline-block; padding: 1em 1.5em; margin-left: .5em; border: none; transform: skew(-12deg); text-shadow: none; text-transform: uppercase; font-weight: 700; background-color: #3E267B; color: #fff !important; box-shadow: 0px 0px 5px -1px #b7b7b7; }
+.cta-button { display: inline-block; padding: 1em 1.5em; margin-left: .5em; border: none; transform: skew(-12deg); text-shadow: none; text-transform: uppercase; white-space: nowrap; font-weight: 700; background-color: #3E267B; color: #fff !important; box-shadow: 0px 0px 5px -1px #b7b7b7; }
 
 .cta-button:after { content: ''; position: absolute; z-index: -1; top: 0; left: 0; right: 0; bottom: 0; background: #e31c79; transform: scale(0); transition-property: transform; transition-duration: 0.3s; transition-timing-function: ease-out; }
 

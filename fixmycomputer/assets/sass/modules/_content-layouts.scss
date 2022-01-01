@@ -12,7 +12,6 @@
         margin-right: 2.5em;
     }
 }
-
 .module-content-image-slider {
     margin: 4em 0 2em 0;
 
@@ -47,5 +46,24 @@
             padding: 0.6em 0.8em;
             font-size: 0.814em;
         }
+    }
+}
+@media (max-width: 62.5em) {        // 1000px
+    .module-two-column, .module-content-image-slider {
+        .content-container {
+            flex-direction: column!important;
+        }
+        .column {
+            width: 100%!important;
+        }
+        .column:nth-of-type(1){
+            padding: 0 0 1.5em 0!important;
+        }
+    }
+}
+.module-two-column, .module-service-block, .module-full-width-content, .module-content-image-slider {
+    ul, ol {
+        line-height: 1.857;
+        margin-top: 0;
     }
 }

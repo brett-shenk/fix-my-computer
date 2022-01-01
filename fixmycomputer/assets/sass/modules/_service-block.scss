@@ -17,6 +17,7 @@
         overflow: hidden;
         min-width: 390px;
         margin: 1em;
+        background-color: #000000;
 
         .first-part {
             position: relative;
@@ -127,9 +128,17 @@
 
         .column {
             flex-basis: 33%;
-            padding: 2.8em 1.5em 2.8em 1.5em;
+            padding: 2.8em 1.9em 2.8em 1.9em;
             text-align: center;
             position: relative;
+
+            @media (max-width: 75em) {          // 1200px
+                flex-basis: 50%;
+            }
+            @media (max-width: 48em) {          // 768px
+                flex-basis: 100%;
+                padding: 2.8em 0 2.8em 0;
+            }
         }
         a.cta-button {
             position: absolute;

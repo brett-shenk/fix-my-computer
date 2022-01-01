@@ -59,11 +59,23 @@
                 background-color: $color_white;
                 color: #00529C;
             }
+            @media (max-width: 47.9375em) {         // 767px
+                padding: 0.1em 0.4em;
+            }
         }
         .footer-map {
             font-size: 29px;
             display: inline-block;
             margin-right: .2em;
+
+            @media (max-width: 47.9375em) {         // 767px
+                padding: 0.1em;
+            }
+        }
+        .tooltip:after {
+            @media (max-width: 47.9375em) {         // 767px
+                bottom: 34px;
+            }
         }
 
         &:nth-of-type(1){
@@ -83,19 +95,39 @@
             th, td {
                 padding-bottom: 0.3em;
             }
+            & > div {
+                @media (max-width: 47.9375em) {         // 767px
+                    margin-top: 1.3em!important
+                }
+            }
         }
         &:nth-of-type(3){
             flex-basis: 20%;
 
+            @media (max-width: 47.9375em) {         // 767px
+                margin-top: 4.3em;
+
+                address {
+                    margin-top: 2.5em;
+                }
+            }
             .footer-link-size {
                 font-size: 1.2em;
                 margin-bottom: 0.3em;
                 display: inline-block;
+
+                @media (max-width: 47.9375em) {         // 767px
+                    padding: 0.5em;
+                    margin-bottom: 0;
+                }
             }
         }
         &:nth-of-type(4){
             flex-basis: 32%;
 
+            @media (max-width: 47.9375em) {         // 767px
+                padding-top: 4em;
+            }
             & > a:first-of-type {
                 border-radius: 50%;
                 
@@ -152,8 +184,13 @@
         }
     }
     .wpcf7-form {
+        position: relative;
+        min-height: 19px;
+
         .newsletter-form {
-            display: block;
+            transform: scale(1);
+            height: 100%;
+            transition: .25s all ease;
 
             @media (max-width: 47.9375em) {         // 767px
                 margin: 0 auto;
@@ -171,14 +208,23 @@
             }
         }
         .newsletter-thanks {
-            display: none;
+            transform: scale(0);
+            height: 0;
+            transition: .25s all ease;
+            position: absolute;
+            top: 0;
         }
         &.sent {
             .newsletter-form {
-                display: none;
+                transform: scale(0);
+                height: 0;
             }
             .newsletter-thanks {
-                display: block;
+                transform: scale(1);
+                height: 19px;
+            }
+            .wpcf7-response-output {
+                display: none;
             }
         }
         .wpcf7-form-control-wrap {
@@ -202,6 +248,9 @@
 .site-copyright {
     padding: 1.6em 0;
     
+    @media (max-width: 25em) {         // 400px
+        font-size: 0.85em;
+    }
     a {
         color: $color_black;
         @include link_draw_line();

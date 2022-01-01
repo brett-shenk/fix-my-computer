@@ -50,8 +50,8 @@ function the_site_footer(){
     ?>
     <div class="column-container wrapper">
         <section class="column">
-            <a href="<?php echo site_url(); ?>" title="<?php echo $logo['alt']; ?>" class="logo">
-                <img src="<?php echo $logo['url']; ?>" alt="" width="<?php echo $logo['width']; ?>" height="<?php echo $logo['height']; ?>" loading="lazy" />
+            <a href="<?php echo site_url(); ?>" class="logo">
+                <img src="<?php echo $logo['url']; ?>" alt="<?php echo $logo['alt']; ?>" width="<?php echo $logo['width']; ?>" height="<?php echo $logo['height']; ?>" loading="lazy" />
             </a>
         </section>
         <section class="column" aria-labelledby="footer_second_column">
@@ -124,6 +124,7 @@ function the_site_footer(){
             <?php } ?>
         </section>
         <section class="column">
+            <p>Sign up for our newsletter and get the occasional update.</p>
             <?php echo do_shortcode('[contact-form-7 id="262" title="Newsletter"]'); ?>
             
             <div class="column-container">

@@ -2,7 +2,7 @@ body.page-template-slim-layout .site-main,
 body.privacy-policy.page-template .site-main{
     section {
         & > .wrapper {
-            max-width: 81.3em;  // does it to the footer as well as the content
+            max-width: 81.3em;
         }
     }
     section .wrapper {

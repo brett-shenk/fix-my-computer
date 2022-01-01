@@ -41,6 +41,19 @@
 			color: $color_error;
 		}
 	}
+	label[for=pictures-included]{
+		pointer-events: all;
+		position: initial;
+		padding: 0 0 0.5em 0;
+		display: block;
+	}
+	input[type="file"]{
+		cursor: pointer;
+	}
+	.input-wrap p {
+		line-height: 1;
+		margin-top: 0.45em;
+	}
 	.wpcf7-response-output {
 		color: $color_error;
 		background-color: #cfcfcf;

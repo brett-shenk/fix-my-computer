@@ -104,8 +104,8 @@ function site_logo() {
 	$logo_2 = get_field('mobile_logo', 'options');
 	?>
 	<a href="<?php echo site_url(); ?>" class="logo" title="Fix My Computer">
-		<img class="desktop" src="<?php echo $logo_1['url']; ?>" alt="" width="<?php echo $logo_1['width']; ?>" height="<?php echo $logo_1['height']; ?>" />
-		<img class="mobile" src="<?php echo $logo_2['url']; ?>" alt="" width="<?php echo $logo_2['width']; ?>" height="<?php echo $logo_2['height']; ?>" />
+		<img class="desktop" src="<?php echo $logo_1['url']; ?>" alt="Fix My Computer" width="<?php echo $logo_1['width']; ?>" height="<?php echo $logo_1['height']; ?>" />
+		<img class="mobile" src="<?php echo $logo_2['url']; ?>" alt="Fix My Computer" width="<?php echo $logo_2['width']; ?>" height="<?php echo $logo_2['height']; ?>" />
 	</a>
 <?php }
 
@@ -159,7 +159,7 @@ function default_page_header_open(){
 				array( 'alt' => $banner_image['alt'], "class" => '' ));
 			} else {
 				?>
-				<img src="<?php echo site_url(); ?>/wp-content/themes/fixmycomputer/assets/dist/images/cricut-board-cards.jpg" alt="" width="1920" height="400" loading="lazy" crossorigin="anonymous" />
+				<img src="<?php echo site_url(); ?>/wp-content/themes/fixmycomputer/assets/dist/images/cricut-board-cards.jpg" alt="A pile RAM and CPUs" width="1920" height="400" loading="lazy" crossorigin="anonymous" />
 				<?php 
 			}
 		}

@@ -165,36 +165,17 @@ window.addEventListener('resize', function(event){
 /**
  * Contact Form 7 Functions
 **/
-if( $('.site-main .wpcf7').length ){
-	// Form label animation
-	$( '.wpcf7' ).delegate( 'input, textarea', 'focus', function(element) {
-		var input = element.target;
-		var label = element.target.parentElement.parentElement.querySelector('label');
+// global form variables
+var formExclude = ['wpcf7-file', 'wpcf7-submit', 'wpcf7-reset'];
+var animationStop = false;
 
-		// On focus
-		label.style.top = '-0.5em';
-		label.style.left = '0.4em';
-		label.style.fontSize = '0.9em';
-	});
-	$( '.wpcf7' ).delegate( 'input, textarea', 'focusout', function(element) {
-		var input = element.target;
-		var label = element.target.parentElement.parentElement.querySelector('label');
-
-		// On focus out
-		if( input.value == '' ){
-			label.style.top = '0.7em';
-			label.style.left = '0.6em';
-			label.style.fontSize = '1.1em';
-		}
-	});
-}
+// Triggers on page load to prevent filled fields being covered
 function cf7_form_loaded(){
-	// Triggers on page load to prevent filled fields being covered
 	var inputs = document.querySelectorAll('.site-main .wpcf7 .wpcf7-form-control');
 	inputs.forEach(function(input){
 		var input_classes = input.classList;
 		var label = input.parentElement.parentElement.querySelector('label');
-		if( !input_classes.contains('wpcf7-submit') ){
+		if( !input_classes.contains('wpcf7-submit') || !input_classes.contains('wpcf7-file') ){
 			if( input.value != '' ){
 				label.style.top = '-0.5em';
 				label.style.left = '0.4em';
@@ -204,7 +185,66 @@ function cf7_form_loaded(){
 	});
 }
 
+// Form label animation
+if( $('.site-main .wpcf7').length ){
+	$( '.wpcf7' ).delegate( 'input, textarea', 'focus', function(element) {
+		// setup 
+		var input = element.target;
+		var label = element.target.parentElement.parentElement.querySelector('label');
+		
+		var input_search = input.classList.value;
+		input_search = input_search.replace('wpcf7-form-control ', '');
+		input_search = input_search.replace(' wpcf7-validates-as-required', '');
+
+		// check if we should animate the selected field
+		var i = 0;
+		while(i < formExclude.length){
+			if( input_search.includes( formExclude[i] ) == true ){
+				animationStop = true;
+				break;
+			}
+			i++;
+		}
+
+		// On focus if it's an element we want to animate
+		if( animationStop != true ){
+			label.style.top = '-0.5em';
+			label.style.left = '0.4em';
+			label.style.fontSize = '0.9em';
+		}
+		animationStop = false;	// reset back to global after being triggered
+	});
+	$( '.wpcf7' ).delegate( 'input, textarea', 'focusout', function(element) {
+		// setup 
+		var input = element.target;
+		var label = element.target.parentElement.parentElement.querySelector('label');
+
+		var input_search = input.classList.value;
+		input_search = input_search.replace('wpcf7-form-control ', '');
+		input_search = input_search.replace(' wpcf7-validates-as-required', '');
+
+		// check if we should animate the selected field
+		var i = 0;
+		while(i < formExclude.length){
+			if( input_search.includes( formExclude[i] ) == true ){
+				animationStop = true;
+				break;
+			}
+			i++;
+		}
+
+		// On focus out if it's an element we want to animate
+		if( animationStop != true && input.value == '' ){
+			label.style.top = '0.7em';
+			label.style.left = '0.6em';
+			label.style.fontSize = '1.1em';
+		}
+		animationStop = false;	// reset back to global after being triggered
+	});
+}
+
 // On Submit
+/*
 document.addEventListener( 'wpcf7mailsent', function( event ) {
 	// var siteURL = window.location.protocol + '//' + window.location.hostname;
 	
@@ -215,3 +255,4 @@ document.addEventListener( 'wpcf7mailsent', function( event ) {
         // All other forms
 	}
 }, false );
+*/
