@@ -33,12 +33,6 @@ const CONFIG = {
             ]
         },
         {
-            "id": "global",
-            "js": [
-                'assets/js/global.js'
-            ]
-        },
-        {
             "id": "vendor",
             "js": [
                 'assets/js/vendor/slick/slick.min.js',

@@ -27,8 +27,8 @@ add_action( 'entry_header', 'wrapper_close', 14);
 
 function preloading_animation() { ?>
 	<div id="preload-container" aria-hidden="true">
-		<div class="preload-wrap">
-			<div class="loader">Loading</div>
+		<div class="loader-wrap">
+			<span class="loader"></span>
 		</div>
 	</div>
 <?php }

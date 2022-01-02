@@ -152,6 +152,8 @@ add_action( 'admin_menu', function(){
 	remove_submenu_page( 'options-general.php', 'options-discussion.php' );		// Discussion
 	remove_submenu_page( 'options-general.php', 'options-media.php' );			// Media
 
+	remove_menu_page( 'jvcf7' );	// See: https://dnesscarkey.com/jquery-validation/validation-methods/
+
 	# Meta box Removals
 	remove_meta_box( 'authordiv', 'page', 'normal' );			// author
 }, 999 );

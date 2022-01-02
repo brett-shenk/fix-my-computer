@@ -25,6 +25,20 @@
 		position: relative;
 		margin-bottom: 1.5em;
 	}
+	.wpcf7-validates-as-required {
+		transition: .25s all ease;	
+	}
+	.wpcf7-validates-as-required.error {
+		margin-bottom: 1.1em;
+	}
+	.wpcf7-validates-as-required.error ~ label {
+		top: unset;
+		bottom: -4px;
+		left: 0;
+		font-size: 14px;
+		pointer-events: auto;
+		padding-left: 0;
+	}
 	label {
 		background-color: white;
 		display: inline-block;

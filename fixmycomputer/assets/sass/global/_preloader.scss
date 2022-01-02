@@ -11,43 +11,31 @@
     z-index: 5000;
     background-color: #2f2f2f;
 }
-#preload-container .preload-wrap {
+#preload-container .loader-wrap {
     position: absolute;
-    top: 48.5%;
-    width: 100%;
-    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* ************************ */
 #preload-container .loader {
-    font-size: 48px;
+    width: 48px;
+    height: 48px;
     display: inline-block;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: bold;
-    color: #fff;
-    letter-spacing: 2px;
     position: relative;
+    background: #e31c79;
     box-sizing: border-box;
+    animation: flipX 1s linear infinite;
 }
-#preload-container .loader::after {
-    content: "Loading";
-    position: absolute;
-    left: 0;
-    top: 0;
-    color: #263238;
-    text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    box-sizing: border-box;
-    animation: animloader 6s linear infinite;
-}
-
-@keyframes animloader {
+@keyframes flipX {
     0% {
-        height: 100%;
+        transform: perspective(200px) rotateX(0deg) rotateY(0deg);
+    }
+    50% {
+        transform: perspective(200px) rotateX(-180deg) rotateY(0deg);
     }
     100% {
-        height: 0%;
+        transform: perspective(200px) rotateX(-180deg) rotateY(-180deg);
     }
 }

@@ -31,14 +31,12 @@ function shenk_register_scripts(){
     
     # Register scripts for later use
     wp_register_script('alert-bar', STYLE_DIR . '/assets/dist/js/alert-bar.min.js', array('jquery'), 1, true);
-    wp_register_script('global', STYLE_DIR . '/assets/dist/js/global.min.js', array('jquery'), 1, false );
     wp_register_script('vendor', STYLE_DIR . '/assets/dist/js/vendor.min.js', array('jquery'), 1, true);
     wp_register_script('main', STYLE_DIR . '/assets/dist/js/theme.min.js', array('jquery', 'vendor'), 1, true );
 
     # Enqueue scripts
     wp_enqueue_script('vendor');
     wp_enqueue_script('main');
-    wp_enqueue_script('global');
 }
 
 

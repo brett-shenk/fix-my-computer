@@ -9,6 +9,30 @@ if(typeof($) === 'undefined') {
    var $ = jQuery;
 }
 
+
+/**
+ * Wait for final event
+ * 
+ * $(document.body).on('updated_cart_totals', function(){
+ * 		waitForFinalEvent(function(){
+ * 			console.log('do stuff');
+ * 		}, 500);
+ * });
+**/
+var waitForFinalEvent = (function(){
+	var timers = {};
+	return function (callback, ms, uniqueId) {
+		if (!uniqueId) {
+		uniqueId = "Don't call this twice without a uniqueId";
+	}
+	if (timers[uniqueId]) {
+		clearTimeout (timers[uniqueId]);
+	}
+	timers[uniqueId] = setTimeout(callback, ms);
+	};
+})();
+
+
 /**
  * Scroll Position of the header
 **/
@@ -242,17 +266,3 @@ if( $('.site-main .wpcf7').length ){
 		animationStop = false;	// reset back to global after being triggered
 	});
 }
-
-// On Submit
-/*
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-	// var siteURL = window.location.protocol + '//' + window.location.hostname;
-	
-	if ( '817' == event.detail.contactFormId ) {
-        // Form redirect for the CF7 form with the 817 ID
-		// location = siteURL + '/thank-you-quote/';
-	} else {
-        // All other forms
-	}
-}, false );
-*/

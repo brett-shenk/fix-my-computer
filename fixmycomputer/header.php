@@ -23,11 +23,10 @@
 
 	<?php /*  The Preloader can also can be found in:   global/_preloader.scss */ ?>
 	<style type="text/css">
-	#preload-container {position: fixed;left: 0;right: 0;top: 0;bottom: 0;z-index: 5000;background-color: #2f2f2f;}
-	#preload-container .preload-wrap {position: absolute;top: 48.5%;width: 100%;text-align: center;}
-	#preload-container .loader {font-size: 48px;display: inline-block;font-family: Arial, Helvetica, sans-serif;font-weight: bold;color: #fff;letter-spacing: 2px;position: relative;box-sizing: border-box;}
-	#preload-container .loader::after {content: "Loading";position: absolute;left: 0;top: 0;color: #263238;text-shadow: 0 0 2px #fff, 0 0 1px #fff, 0 0 1px #fff;width: 100%;height: 100%;overflow: hidden;box-sizing: border-box;animation: animloader 6s linear infinite;}
-	@keyframes animloader {0% {height: 100%;}100% {height: 0%;}}
+	#preload-container{position:fixed;left:0;right:0;top:0;bottom:0;z-index:5000;background-color:#2f2f2f}
+	#preload-container .loader-wrap{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%)}
+	#preload-container .loader{width:48px;height:48px;display:inline-block;position:relative;background:#e31c79;box-sizing:border-box;animation:flipX 1s linear infinite}
+	@keyframes flipX{0%{transform:perspective(200px) rotateX(0) rotateY(0)}50%{transform:perspective(200px) rotateX(-180deg) rotateY(0)}100%{transform:perspective(200px) rotateX(-180deg) rotateY(-180deg)}}
 	</style>
 	
 	<?php wp_head(); ?>

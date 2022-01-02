@@ -227,9 +227,21 @@
                 display: none;
             }
         }
+        .wpcf7-form.sent {
+            #email-newsletter-error{
+                display: none;
+            }
+        }
         .wpcf7-form-control-wrap {
             position: relative;
 
+            #email-newsletter-error{
+                padding-left: 0;
+                position: absolute;
+                left: 0;
+                bottom: -24px;
+                font-size: 14px !important;
+            }
             .wpcf7-not-valid-tip {
                 position: absolute;
                 left: 0;

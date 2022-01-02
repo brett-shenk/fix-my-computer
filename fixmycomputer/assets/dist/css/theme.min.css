@@ -385,7 +385,11 @@ body.admin-bar .site-header { top: 2em; }
 
 .site-footer .wpcf7-form.sent .wpcf7-response-output { display: none; }
 
+.site-footer .wpcf7-form .wpcf7-form.sent #email-newsletter-error { display: none; }
+
 .site-footer .wpcf7-form .wpcf7-form-control-wrap { position: relative; }
+
+.site-footer .wpcf7-form .wpcf7-form-control-wrap #email-newsletter-error { padding-left: 0; position: absolute; left: 0; bottom: -24px; font-size: 14px !important; }
 
 .site-footer .wpcf7-form .wpcf7-form-control-wrap .wpcf7-not-valid-tip { position: absolute; left: 0; bottom: -1.3em; }
 
@@ -705,6 +709,12 @@ body { min-height: 90vh; }
 .site-main .wpcf7 input[type="text"], .site-main .wpcf7 input[type="email"], .site-main .wpcf7 input[type="tel"], .site-main .wpcf7 input[type="number"], .site-main .wpcf7 textarea { padding: 0.8em; }
 
 .site-main .wpcf7 .input-wrap { position: relative; margin-bottom: 1.5em; }
+
+.site-main .wpcf7 .wpcf7-validates-as-required { transition: .25s all ease; }
+
+.site-main .wpcf7 .wpcf7-validates-as-required.error { margin-bottom: 1.1em; }
+
+.site-main .wpcf7 .wpcf7-validates-as-required.error ~ label { top: unset; bottom: -4px; left: 0; font-size: 14px; pointer-events: auto; padding-left: 0; }
 
 .site-main .wpcf7 label { background-color: white; display: inline-block; padding: 0 0.4em; pointer-events: none; position: absolute; top: 0.7em; left: 0.6em; font-size: 1.1em; font-weight: 500; transition: .25s all ease; }
 
