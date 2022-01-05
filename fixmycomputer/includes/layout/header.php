@@ -113,14 +113,11 @@ function site_navigation() { ?>
 		<?php
 		wp_nav_menu(array(
 			'menu'				=> 'Main Nav',
-			// 'menu_class'        => "",
 			'container'			=> 'nav',
 			'container_class'	=> 'main-nav',
 			'walker'			=> new NAV_Walker,
-			// 'before'            => "", 		// Text before the link markup
-			// 'after'             => "", 		// Text after the link markup
-			// 'link_before'       => "", 		// Text before the link text
-			// 'link_after'        => "", 		// Text after the link text
+			// 'before'            => "",
+			// 'after'             => "",
 		)); ?>
 		<button class="hamburger hamburger--collapse" type="button" aria-label="Mobile Menu">
 			<span class="hamburger-box">

@@ -43,29 +43,38 @@
 	@if $filename == close {
 		$char: "\E003";
 	}
-	@if $filename == done {
+	@if $filename == computer-1 {
 		$char: "\E004";
 	}
-	@if $filename == email {
+	@if $filename == computer-2 {
 		$char: "\E005";
 	}
-	@if $filename == facebook {
+	@if $filename == computer-3 {
 		$char: "\E006";
 	}
-	@if $filename == home1 {
+	@if $filename == done {
 		$char: "\E007";
 	}
-	@if $filename == map {
+	@if $filename == email {
 		$char: "\E008";
 	}
-	@if $filename == mode-dark {
+	@if $filename == facebook {
 		$char: "\E009";
 	}
-	@if $filename == mode-light {
+	@if $filename == home1 {
 		$char: "\E00A";
 	}
-	@if $filename == phone {
+	@if $filename == map {
 		$char: "\E00B";
+	}
+	@if $filename == mode-dark {
+		$char: "\E00C";
+	}
+	@if $filename == mode-light {
+		$char: "\E00D";
+	}
+	@if $filename == phone {
+		$char: "\E00E";
 	}
 
 	@return $char;
@@ -90,6 +99,15 @@
 }
 .icon-close {
 	@include icon(close);
+}
+.icon-computer-1 {
+	@include icon(computer-1);
+}
+.icon-computer-2 {
+	@include icon(computer-2);
+}
+.icon-computer-3 {
+	@include icon(computer-3);
 }
 .icon-done {
 	@include icon(done);

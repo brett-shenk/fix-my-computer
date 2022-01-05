@@ -2,7 +2,7 @@
 
 // Variables, Toolkit, Mixins
 @import "setup/variables";
-// @import "global/icons";
+@import "global/icons";
 
 
 /**
@@ -11,6 +11,19 @@
 .meta-box-sortables #slugdiv,
 #screen-options-wrap label[for="slugdiv-hide"] {
 	display: none;
+}
+[class*='icon-computer']:before{
+    font-size: 5em;
+    line-height: normal;
+}
+.select2-selection__rendered {
+	line-height: normal!important;
+	color: $color_black!important;
+
+	[class*='icon-computer']:before {
+		font-size: 2em;
+    	padding-top: 0;
+	}
 }
 
 // Generic field html stuff for admin messages

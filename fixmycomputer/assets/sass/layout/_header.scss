@@ -91,6 +91,18 @@ body {
             animation-name: zoomIn;
             animation-duration: 2.5s;
         }
+        @media (max-width: 48em){       // 768px
+            img {
+                max-width: unset;
+                width: auto;
+                height: 300px;
+            }
+        }
+        @media (max-width: 48em){       // 768px
+            img {
+                height: 210px;
+            }
+        }
     }
     &[data-layout-type="text"]{
         .entry-title {
