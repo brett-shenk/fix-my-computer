@@ -6,11 +6,6 @@
  * Cleaning up Wordpress Junk
 **/
 
-# List all style and js resources. Spits out the handle + src
-// add_action( 'wp_print_scripts', 'shenk_list_scripts', 999 );
-// add_action( 'wp_print_styles', 'shenk_list_styles', 999 );
-// add_action( 'wp_head', 'sh_enqueued_resources');
-
 // This cleans up  wp_head()  function
 add_action( 'wp_enqueue_scripts', function(){
 
@@ -100,6 +95,9 @@ function prefix_remove_php_test( $tests ) {
 	unset( $tests['direct']['theme_version'] );
 	return $tests;
 }
+
+// Disable Rankmath search query
+add_filter( 'rank_math/json_ld/disable_search', '__return_true' );
 
 
 /**

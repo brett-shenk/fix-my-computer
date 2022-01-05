@@ -89,8 +89,3 @@ add_filter('stylesheet_uri', 'shenk_stylesheet_uri');
 function shenk_stylesheet_uri($stylesheet_uri){
     return $stylesheet_uri;
 }
-
-# List all style and js resources. Spits out the handle + src
-// add_action( 'wp_print_scripts', 'shenk_list_scripts', 999 );
-// add_action( 'wp_print_styles', 'shenk_list_styles', 999 );
-// add_action( 'wp_head', 'sh_enqueued_resources');

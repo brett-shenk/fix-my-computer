@@ -40,39 +40,6 @@ add_filter('body_class', function( $classes ){
 
 
 /**
- * Helper Function that lists all style and js resources. Spits out the handle + src
-**/
-global $enqueued_scripts;
-global $enqueued_styles;
-
-function shenk_list_scripts(){
-    global $wp_scripts;
-    global $enqueued_scripts;
-    $enqueued_scripts = array();
-    foreach ( $wp_scripts->queue as $handle ) {
-        $enqueued_scripts[$handle] = $wp_scripts->registered[$handle]->src;
-    }
-}
-function shenk_list_styles(){
-    global $wp_styles;
-    global $enqueued_styles;
-    $enqueued_styles = array();
-    foreach ( $wp_styles->queue as $handle ) {
-        $enqueued_styles[$handle] = $wp_styles->registered[$handle]->src;
-    }
-}
-function sh_enqueued_resources(){
-    global $enqueued_scripts;
-    v_dump( $enqueued_scripts );
-    global $enqueued_styles;
-    v_dump( $enqueued_styles );
-}
-// add_action( 'wp_print_scripts', 'shenk_list_scripts', 999 );
-// add_action( 'wp_print_styles', 'shenk_list_styles', 999 );
-// add_action( 'wp_head', 'sh_enqueued_resources');
-
-
-/**
  * Nav menu walker
 **/
 class NAV_Walker extends Walker_Nav_Menu {

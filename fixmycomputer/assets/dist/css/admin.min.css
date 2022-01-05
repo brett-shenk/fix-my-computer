@@ -1,37 +1,3 @@
-/**
- * SIZES 
-**/
-/**
- * COLORS
-**/
-/**
- * Files Paths
-**/
-/**
- * TYPOGRAPHY
-**/
-/**
- * SOCIAL COLORS
-**/
-/** Admin Styles */
-.meta-box-sortables #slugdiv, #screen-options-wrap label[for="slugdiv-hide"] { display: none; }
-
-.acf-field.acf-field-message ul { list-style-type: disc; }
-
-.acf-field.acf-field-message ol { list-style-type: decimal; }
-
-.acf-field.acf-field-message ul, .acf-field.acf-field-message ol { padding-left: 1.5em; padding-bottom: 0.5em; }
-
-.acf-field.acf-field-group.seamless { padding: 0 !important; }
-
-.acf-field.acf-field-group.seamless .acf-fields.-border { border: none; }
-
-.acf-field.acf-field-group.seamless > .acf-label { margin-bottom: 0 !important; }
-
-.acf-field.acf-field-group.seamless > .acf-label label { margin-left: 12px; margin-top: 15px; }
-
-.acf-field.acf-field-group.seamless > .acf-input { padding: 0 !important; }
-
-.acf-fields .acf-field.noLabel > .acf-label { display: none; }
+@font-face{font-family:'shenks-icons';font-display:block;src:url("../svgs/shenks-icons.woff2") format("woff2"),url("../svgs/shenks-icons.woff") format("woff"),url("../svgs/shenks-icons.ttf") format("truetype"),url("../svgs/shenks-icons.svg#shenks-icons") format("svg")}.icon-chevron-left:before,.icon-chevron-right:before,.icon-close:before,.icon-computer-1:before,.icon-computer-2:before,.icon-computer-3:before,.icon-done:before,.icon-email:before,.icon-facebook:before,.icon-home1:before,.icon-map:before,.icon-mode-dark:before,.icon-mode-light:before,.icon-phone:before,.checkbox-wrap:before,.slick-prev:before,[dir='rtl'] .slick-next:before,.slick-next:before,[dir='rtl'] .slick-prev:before{font-family:"shenks-icons";-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-style:normal;font-weight:normal;text-decoration:none;display:inline-block;line-height:inherit;vertical-align:bottom;transition:all 0.25s ease-out}.icon-chevron-left:before{content:""}.icon-chevron-right:before{content:""}.icon-close:before{content:""}.icon-computer-1:before{content:""}.icon-computer-2:before{content:""}.icon-computer-3:before{content:""}.icon-done:before{content:""}.icon-email:before{content:""}.icon-facebook:before{content:""}.icon-home1:before{content:""}.icon-map:before{content:""}.icon-mode-dark:before{content:""}.icon-mode-light:before{content:""}.icon-phone:before{content:""}.checkbox-wrap:before{content:""}.slick-prev:before,[dir='rtl'] .slick-next:before{content:""}.slick-next:before,[dir='rtl'] .slick-prev:before{content:""}.meta-box-sortables #slugdiv,#screen-options-wrap label[for="slugdiv-hide"]{display:none}[class*='icon-computer']:before{font-size:5em;line-height:normal}.select2-selection__rendered{line-height:normal !important;color:#000 !important}.select2-selection__rendered [class*='icon-computer']:before{font-size:2em;padding-top:0}.acf-field.acf-field-message ul{list-style-type:disc}.acf-field.acf-field-message ol{list-style-type:decimal}.acf-field.acf-field-message ul,.acf-field.acf-field-message ol{padding-left:1.5em;padding-bottom:0.5em}.acf-field.acf-field-group.seamless{padding:0 !important}.acf-field.acf-field-group.seamless .acf-fields.-border{border:none}.acf-field.acf-field-group.seamless>.acf-label{margin-bottom:0 !important}.acf-field.acf-field-group.seamless>.acf-label label{margin-left:12px;margin-top:15px}.acf-field.acf-field-group.seamless>.acf-input{padding:0 !important}.acf-fields .acf-field.noLabel>.acf-label{display:none}
 
 /*# sourceMappingURL=admin.min.css.map */
