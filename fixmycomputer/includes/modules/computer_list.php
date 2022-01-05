@@ -14,40 +14,50 @@
                 <div class="single-computer-block">
                     <div class="single-computer-inner">
                         <i class="icon-<?php echo $icon; ?>"></i><br>
-                        <h2><?php echo $type; ?></h2>
+                        <?php if( $type ){ ?>
+                            <h2><?php echo $type; ?></h2>
+                        <?php } ?>
                         <table>
-                            <tr>
-                                <td>
-                                    <strong>Hard Drive:</strong>
-                                </td>
-                                <td>
-                                    <?php echo $hard_drive; ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>RAM:</strong>
-                                </td>
-                                <td>
-                                    <?php echo $ram; ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>CPU:</strong>
-                                </td>
-                                <td>
-                                    <?php echo $cpu; ?>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>
-                                    <strong>Video Card:</strong>
-                                </td>
-                                <td>
-                                    <?php echo $video_card; ?>
-                                </td>
-                            </tr>
+                            <?php if( $hard_drive ){ ?>
+                                <tr>
+                                    <td>
+                                        <strong>Hard Drive:</strong>
+                                    </td>
+                                    <td>
+                                        <?php echo $hard_drive; ?>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                            <?php if( $ram ){ ?>
+                                <tr>
+                                    <td>
+                                        <strong>RAM:</strong>
+                                    </td>
+                                    <td>
+                                        <?php echo $ram; ?>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                            <?php if( $cpu ){ ?>
+                                <tr>
+                                    <td>
+                                        <strong>CPU:</strong>
+                                    </td>
+                                    <td>
+                                        <?php echo $cpu; ?>
+                                    </td>
+                                </tr>
+                            <?php } ?>
+                            <?php if( $video_card ){ ?>
+                                <tr>
+                                    <td>
+                                        <strong>Video Card:</strong>
+                                    </td>
+                                    <td>
+                                        <?php echo $video_card; ?>
+                                    </td>
+                                </tr>
+                            <?php } ?>
                         </table>
                     </div>
                 </div>
