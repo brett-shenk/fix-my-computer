@@ -28,6 +28,15 @@
 	#preload-container .loader{width:48px;height:48px;display:inline-block;position:relative;background:#e31c79;box-sizing:border-box;animation:flipX 1s linear infinite}
 	@keyframes flipX{0%{transform:perspective(200px) rotateX(0) rotateY(0)}50%{transform:perspective(200px) rotateX(-180deg) rotateY(0)}100%{transform:perspective(200px) rotateX(-180deg) rotateY(-180deg)}}
 	</style>
+
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-45870913-2"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+	gtag('config', 'UA-45870913-2');
+	</script>
 	
 	<?php wp_head(); ?>
 
