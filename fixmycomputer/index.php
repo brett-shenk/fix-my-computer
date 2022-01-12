@@ -9,5 +9,3 @@
  *
  * @link http://codex.wordpress.org/Template_Hierarchy
  */
-
-shenk_init();
