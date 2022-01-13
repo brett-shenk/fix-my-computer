@@ -147,7 +147,7 @@ add_action( 'admin_menu', function(){
 
 	# Settings
 	remove_submenu_page( 'options-general.php', 'options-writing.php' );		// Writing
-	remove_submenu_page( 'options-general.php', 'options-discussion.php' );		// Discussion
+	// remove_submenu_page( 'options-general.php', 'options-discussion.php' );		// Discussion
 	remove_submenu_page( 'options-general.php', 'options-media.php' );			// Media
 
 	remove_menu_page( 'jvcf7' );	// See: https://dnesscarkey.com/jquery-validation/validation-methods/
