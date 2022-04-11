@@ -189,6 +189,26 @@ window.addEventListener('resize', function(event){
 /**
  * Contact Form 7 Functions
 **/
+// Validation
+if( $('.site-main .wpcf7').length ){
+	$('.wpcf7-form').on('click', function(){
+		var pattern = /[(http(s)?):\/\/(www\.)?a-zA-Z0-9@:%._\+~#=]{2,256}\.[a-z]{2,6}\b([-a-zA-Z0-9@:%_\+.~#?&//=]*)/g;
+		// Demo: https://regex101.com/r/CNcn11/1
+		var your_message = document.querySelector('#your-message').value;
+	
+		if( pattern.test(your_message) == true ){
+			document.querySelector('#your-message-error').innerHTML = "Your message contains a URL. It must be removed, sorry.";
+			document.querySelector('#your-message-error').style.display = 'block';
+			document.querySelector('#your-message').classList.remove('valid');
+			document.querySelector('#your-message').classList.add('error');
+			return false;
+		} else {
+			return true;
+		}
+	});
+}
+
+
 // global form variables
 var formExclude = ['wpcf7-file', 'wpcf7-submit', 'wpcf7-reset'];
 var animationStop = false;
